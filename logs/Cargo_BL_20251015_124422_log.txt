@@ -1,0 +1,4 @@
+SID [INFO] Valid split qty for BL=ETO 2504 0307 | Split=418.569 < B/L=3505.513 → kept.
+End Time: 2025-10-15 12:44:22
+Output Excel: Cargo_BL_20251015_124422.xlsx
+Output Log: Cargo_BL_20251015_124422_log.txt

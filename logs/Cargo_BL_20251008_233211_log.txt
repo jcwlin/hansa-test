@@ -1,0 +1,7 @@
+SID [OK] Split qty valid for BL=LBG/PAR-05 | Split=1999.858 | B/L=1999.858
+SID [OK] Split qty valid for BL=LBG/PAR-05 | Split=1999.858 | B/L=1999.858
+SID [OK] Split qty valid for BL=LBG/PAR-05 | Split=1999.858 | B/L=1999.858
+SID [OK] Split qty valid for BL=LBG/PAR-05 | Split=1999.858 | B/L=1999.858
+End Time: 2025-10-08 23:32:11
+Output Excel: Cargo_BL_20251008_233211.xlsx
+Output Log: Cargo_BL_20251008_233211_log.txt

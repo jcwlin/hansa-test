@@ -1,0 +1,54 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-09-04 11:14:59
+Analysis Type: Cargo_BL
+Language: en
+File Count: 2
+Custom Prompt: Yes
+
+File Preparation: BTR 2501 0101 - Koper.PDF (2079788 bytes)
+File Preparation: BTR 2501 0102 - Constanta.PDF (2104432 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: BTR 2501 0101 - Koper.PDF
+  - Pages: 8
+  - Extracted Text Length: 25775 characters
+  - Status: Success
+OCR Extraction: BTR 2501 0102 - Constanta.PDF
+  - Pages: 8
+  - Extracted Text Length: 26084 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: BTR 2501 0101 - Koper.PDF
+  - Tokens Used: 8064
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: BTR 2501 0102 - Constanta.PDF
+  - Tokens Used: 8117
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+
+=== Processing Summary ===
+Total Processing Time: 28.37 seconds
+Total Tokens Used: 16181
+Total Pages: 16
+Successfully Processed Files: 2
+
+=== Detailed File Processing Statistics ===
+File: BTR 2501 0101 - Koper.PDF
+  - LLM Tokens: 8064
+  - VLM Tokens: 0
+  - Total Tokens: 8064
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 0
+
+File: BTR 2501 0102 - Constanta.PDF
+  - LLM Tokens: 8117
+  - VLM Tokens: 0
+  - Total Tokens: 8117
+  - Successfully Extracted Fields: 2
+  - Missing Fields: 0
+
+End Time: 2025-09-04 11:15:27
+Output Excel: Cargo_BL_20250904_111527.xlsx
+Output Log: Cargo_BL_20250904_111527_log.txt

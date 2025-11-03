@@ -1,0 +1,243 @@
+SID [INFO] Valid split qty for BL=DUM/PAR-01 | Split=1000.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-02 | Split=100.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-03 | Split=400.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-07 | Split=500.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-08 | Split=700.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-09 | Split=1499.878 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-10 | Split=200.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-11 | Split=424.824 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-12 | Split=300.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-13 | Split=110.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-14 | Split=250.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-15 | Split=476.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-16 | Split=300.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-17 | Split=189.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-01 | Split=1000.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-02 | Split=100.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-03 | Split=400.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-04 | Split=450.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-05 | Split=200.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-06 | Split=500.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-07 | Split=500.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-08 | Split=700.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-09 | Split=1499.878 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-10 | Split=200.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-11 | Split=424.824 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-12 | Split=300.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-13 | Split=110.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-14 | Split=250.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-15 | Split=476.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-16 | Split=300.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-17 | Split=189.0 < B/L=2249.824 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-01 | Split=1500.0 < B/L=7049.91 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-02 | Split=1550.0 < B/L=7049.91 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-03 | Split=1999.91 < B/L=7049.91 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-04 | Split=2000.0 < B/L=7049.91 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-05 | Split=1500.0 < B/L=1999.858 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-06 | Split=699.874 < B/L=2149.874 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-07 | Split=1450.0 < B/L=2149.874 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-01 | Split=1500.0 < B/L=7049.91 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-02 | Split=1550.0 < B/L=7049.91 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-03 | Split=1999.91 < B/L=7049.91 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-04 | Split=2000.0 < B/L=7049.91 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-06 | Split=699.874 < B/L=2149.874 → kept.
+SID [INFO] Valid split qty for BL=LBG/PAR-07 | Split=1450.0 < B/L=2149.874 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-04 | Split=450.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-05 | Split=200.0 < B/L=5349.878 → kept.
+SID [INFO] Valid split qty for BL=DUM/PAR-06 | Split=500.0 < B/L=5349.878 → kept.
+
+=== Processing Summary ===
+Total Processing Time: 475.82 seconds
+Total Tokens Used: 361281
+Total Pages: 144
+Successfully Processed Files: 26
+
+=== Detailed File Processing Statistics ===
+File: DUM-PAR-01.pdf
+  - LLM Tokens: 11948
+  - VLM Tokens: 0
+  - Total Tokens: 11948
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-02.pdf
+  - LLM Tokens: 12296
+  - VLM Tokens: 0
+  - Total Tokens: 12296
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-03.pdf
+  - LLM Tokens: 12593
+  - VLM Tokens: 0
+  - Total Tokens: 12593
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-07.pdf
+  - LLM Tokens: 12154
+  - VLM Tokens: 0
+  - Total Tokens: 12154
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-08.pdf
+  - LLM Tokens: 12018
+  - VLM Tokens: 0
+  - Total Tokens: 12018
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-09.pdf
+  - LLM Tokens: 12264
+  - VLM Tokens: 0
+  - Total Tokens: 12264
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-10.pdf
+  - LLM Tokens: 12382
+  - VLM Tokens: 0
+  - Total Tokens: 12382
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-11.pdf
+  - LLM Tokens: 12380
+  - VLM Tokens: 0
+  - Total Tokens: 12380
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-12.pdf
+  - LLM Tokens: 12807
+  - VLM Tokens: 969
+  - Total Tokens: 13776
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date=2025-07-20
+
+File: DUM-PAR-13.pdf
+  - LLM Tokens: 12334
+  - VLM Tokens: 0
+  - Total Tokens: 12334
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-14.pdf
+  - LLM Tokens: 12177
+  - VLM Tokens: 0
+  - Total Tokens: 12177
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-15.pdf
+  - LLM Tokens: 12054
+  - VLM Tokens: 0
+  - Total Tokens: 12054
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-16.pdf
+  - LLM Tokens: 12220
+  - VLM Tokens: 0
+  - Total Tokens: 12220
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-17.pdf
+  - LLM Tokens: 12163
+  - VLM Tokens: 0
+  - Total Tokens: 12163
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EVA PEARL V2506 - COPY NNBL (DUMAI).pdf
+  - LLM Tokens: 36323
+  - VLM Tokens: 0
+  - Total Tokens: 36323
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EVA PEARL V2506 - COPY NNBL (LUBUK GAUNG).pdf
+  - LLM Tokens: 18916
+  - VLM Tokens: 0
+  - Total Tokens: 18916
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: LBG-PAR-01.pdf
+  - LLM Tokens: 12184
+  - VLM Tokens: 0
+  - Total Tokens: 12184
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: LBG-PAR-02.pdf
+  - LLM Tokens: 13163
+  - VLM Tokens: 0
+  - Total Tokens: 13163
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: LBG-PAR-03.pdf
+  - LLM Tokens: 13510
+  - VLM Tokens: 974
+  - Total Tokens: 14484
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date=2025-07-22
+
+File: LBG-PAR-04.pdf
+  - LLM Tokens: 12984
+  - VLM Tokens: 0
+  - Total Tokens: 12984
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: LBG-PAR-05.pdf
+  - LLM Tokens: 12626
+  - VLM Tokens: 1166
+  - Total Tokens: 13792
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)=None
+
+File: LBG-PAR-06.pdf
+  - LLM Tokens: 12182
+  - VLM Tokens: 0
+  - Total Tokens: 12182
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: LBG-PAR-07.pdf
+  - LLM Tokens: 11993
+  - VLM Tokens: 0
+  - Total Tokens: 11993
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-04.pdf
+  - LLM Tokens: 12416
+  - VLM Tokens: 0
+  - Total Tokens: 12416
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-05.pdf
+  - LLM Tokens: 12225
+  - VLM Tokens: 0
+  - Total Tokens: 12225
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: DUM-PAR-06.pdf
+  - LLM Tokens: 12199
+  - VLM Tokens: 0
+  - Total Tokens: 12199
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+End Time: 2025-10-23 12:20:29
+Output Excel: Cargo_BL_20251023_122029.xlsx
+Output Log: Cargo_BL_20251023_122029_log.txt

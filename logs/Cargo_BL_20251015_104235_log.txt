@@ -1,0 +1,12 @@
+SID [INFO] Valid split qty for BL=BTO.2506 0101 | Split=3999.974 < B/L=4999.974 → kept.
+SID [INFO] Valid split qty for BL=ETO. 25060102 | Split=1000.0 < B/L=4999.974 → kept.
+SID [INFO] Valid split qty for BL=ETO 2506 0201 | Split=500.0 < B/L=1824.403 → kept.
+SID [INFO] Valid split qty for BL=ETO 2506 6202 | Split=509.671 < B/L=824.403 → kept.
+SID [INFO] Valid split qty for BL=ETO 2506 0203 | Split=569.803 < B/L=1824.403 → kept.
+SID [INFO] Valid split qty for BL=ETO 2506 0204 | Split=244.929 < B/L=4824.403 → kept.
+SID [INFO] Valid split qty for BL=ETO 2506 0301 | Split=1026.433 < B/L=2005.92 → kept.
+SID [INFO] Valid split qty for BL=ETO 2506 0302 | Split=718.684 < B/L=2008.92 → kept.
+SID [INFO] Valid split qty for BL=ETO 2506 0303 | Split=260.803 < B/L=2008.92 → kept.
+End Time: 2025-10-15 10:42:35
+Output Excel: Cargo_BL_20251015_104235.xlsx
+Output Log: Cargo_BL_20251015_104235_log.txt

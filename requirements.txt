@@ -1,0 +1,57 @@
+# Core Flask and Web Framework
+Flask>=2.3.0
+Werkzeug>=2.3.0
+
+# Data Processing and Analysis
+pandas>=1.5.0
+numpy>=1.24.0
+openpyxl>=3.1.0
+
+# Configuration and Serialization
+PyYAML>=6.0
+
+# Document Processing
+pdfplumber>=0.9.0
+python-docx>=0.8.11
+pdf2image>=1.17.0
+
+# Image Processing and OCR
+Pillow>=10.0.0
+pytesseract>=0.3.10
+
+# Language Detection
+langdetect>=1.0.9
+
+# Web Scraping and HTML Processing
+beautifulsoup4>=4.12.0
+
+# Google Cloud AI Services
+google-cloud-aiplatform>=1.38.0
+google-auth>=2.17.0
+google-generativeai>=0.3.0
+
+# HTTP Requests
+requests>=2.31.0
+
+# Security and Authentication
+bcrypt>=4.0.0
+
+# Concurrent Processing
+#concurrent-futures>=3.1.1
+
+# Database
+# sqlite3  # Built-in with Python
+
+# Logging and Utilities
+# logging  # Built-in with Python
+# threading  # Built-in with Python
+# uuid  # Built-in with Python
+# tempfile  # Built-in with Python
+# pickle  # Built-in with Python
+# datetime  # Built-in with Python
+# os  # Built-in with Python
+# re  # Built-in with Python
+# json  # Built-in with Python
+
+# Optional: For enhanced document processing
+# docling>=1.0.0  # Uncomment if using advanced document conversion

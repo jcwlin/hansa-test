@@ -1,0 +1,172 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-09-05 09:05:03
+Analysis Type: Cargo_BL
+Language: en
+File Count: 9
+Custom Prompt: No
+
+File Preparation: EHA 2505 0101 5298071 4012.460 MT MEG HAZIRA.pdf (563806 bytes)
+File Preparation: EHA 2505 0201 5284767 1991.095 MT SM MUMBAI.pdf (582492 bytes)
+File Preparation: EHA 2505 0202 5300058-1 3975.512 MT SM MUMBAI.pdf (576887 bytes)
+File Preparation: EHA 2505 0203 5300058-2 1500 MT SM MUMBAI.pdf (580020 bytes)
+File Preparation: EHA 2505 0301 5299779 593.547 MT C10 HAZIRA.pdf (569290 bytes)
+File Preparation: EHA 2505 0302 5299782 494.623 MT C10 HAZIRA.pdf (567563 bytes)
+File Preparation: EHA 2505 0401 5271464 334.540 MT MMA HAZIRA.pdf (587505 bytes)
+File Preparation: EHA 2505 0501 5310730-1 3000 MT EDC COCHIN - (3).pdf (625697 bytes)
+File Preparation: EHA 2505 0502 5310730-2 3009.565 MT EDC COCHIN (3).pdf (614251 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: EHA 2505 0101 5298071 4012.460 MT MEG HAZIRA.pdf
+  - Pages: 5
+  - Extracted Text Length: 28754 characters
+  - Status: Success
+OCR Extraction: EHA 2505 0201 5284767 1991.095 MT SM MUMBAI.pdf
+  - Pages: 5
+  - Extracted Text Length: 29738 characters
+  - Status: Success
+OCR Extraction: EHA 2505 0202 5300058-1 3975.512 MT SM MUMBAI.pdf
+  - Pages: 5
+  - Extracted Text Length: 29589 characters
+  - Status: Success
+OCR Extraction: EHA 2505 0203 5300058-2 1500 MT SM MUMBAI.pdf
+  - Pages: 5
+  - Extracted Text Length: 29603 characters
+  - Status: Success
+OCR Extraction: EHA 2505 0301 5299779 593.547 MT C10 HAZIRA.pdf
+  - Pages: 5
+  - Extracted Text Length: 29033 characters
+  - Status: Success
+OCR Extraction: EHA 2505 0302 5299782 494.623 MT C10 HAZIRA.pdf
+  - Pages: 5
+  - Extracted Text Length: 29029 characters
+  - Status: Success
+OCR Extraction: EHA 2505 0401 5271464 334.540 MT MMA HAZIRA.pdf
+  - Pages: 5
+  - Extracted Text Length: 30422 characters
+  - Status: Success
+OCR Extraction: EHA 2505 0501 5310730-1 3000 MT EDC COCHIN - (3).pdf
+  - Pages: 5
+  - Extracted Text Length: 29629 characters
+  - Status: Success
+OCR Extraction: EHA 2505 0502 5310730-2 3009.565 MT EDC COCHIN (3).pdf
+  - Pages: 5
+  - Extracted Text Length: 29538 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: EHA 2505 0101 5298071 4012.460 MT MEG HAZIRA.pdf
+  - Tokens Used: 13936
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 942
+    * B/L split quantity (MT)=4,012.460
+LLM Analysis: EHA 2505 0201 5284767 1991.095 MT SM MUMBAI.pdf
+  - Tokens Used: 13078
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EHA 2505 0202 5300058-1 3975.512 MT SM MUMBAI.pdf
+  - Tokens Used: 13090
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EHA 2505 0203 5300058-2 1500 MT SM MUMBAI.pdf
+  - Tokens Used: 13019
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EHA 2505 0301 5299779 593.547 MT C10 HAZIRA.pdf
+  - Tokens Used: 12286
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EHA 2505 0302 5299782 494.623 MT C10 HAZIRA.pdf
+  - Tokens Used: 11955
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EHA 2505 0401 5271464 334.540 MT MMA HAZIRA.pdf
+  - Tokens Used: 12975
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 726
+    * B/L quantity (MT)=334.540
+LLM Analysis: EHA 2505 0501 5310730-1 3000 MT EDC COCHIN - (3).pdf
+  - Tokens Used: 12461
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EHA 2505 0502 5310730-2 3009.565 MT EDC COCHIN (3).pdf
+  - Tokens Used: 12523
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+
+=== Processing Summary ===
+Total Processing Time: 110.55 seconds
+Total Tokens Used: 116991
+Total Pages: 45
+Successfully Processed Files: 9
+
+=== Detailed File Processing Statistics ===
+File: EHA 2505 0101 5298071 4012.460 MT MEG HAZIRA.pdf
+  - LLM Tokens: 13936
+  - VLM Tokens: 942
+  - Total Tokens: 14878
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: EHA 2505 0201 5284767 1991.095 MT SM MUMBAI.pdf
+  - LLM Tokens: 13078
+  - VLM Tokens: 0
+  - Total Tokens: 13078
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EHA 2505 0202 5300058-1 3975.512 MT SM MUMBAI.pdf
+  - LLM Tokens: 13090
+  - VLM Tokens: 0
+  - Total Tokens: 13090
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EHA 2505 0203 5300058-2 1500 MT SM MUMBAI.pdf
+  - LLM Tokens: 13019
+  - VLM Tokens: 0
+  - Total Tokens: 13019
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EHA 2505 0301 5299779 593.547 MT C10 HAZIRA.pdf
+  - LLM Tokens: 12286
+  - VLM Tokens: 0
+  - Total Tokens: 12286
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EHA 2505 0302 5299782 494.623 MT C10 HAZIRA.pdf
+  - LLM Tokens: 11955
+  - VLM Tokens: 0
+  - Total Tokens: 11955
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EHA 2505 0401 5271464 334.540 MT MMA HAZIRA.pdf
+  - LLM Tokens: 12975
+  - VLM Tokens: 726
+  - Total Tokens: 13701
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L quantity (MT)
+
+File: EHA 2505 0501 5310730-1 3000 MT EDC COCHIN - (3).pdf
+  - LLM Tokens: 12461
+  - VLM Tokens: 0
+  - Total Tokens: 12461
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EHA 2505 0502 5310730-2 3009.565 MT EDC COCHIN (3).pdf
+  - LLM Tokens: 12523
+  - VLM Tokens: 0
+  - Total Tokens: 12523
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+End Time: 2025-09-05 09:06:54
+Output Excel: Cargo_BL_20250905_090654.xlsx
+Output Log: Cargo_BL_20250905_090654_log.txt

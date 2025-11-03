@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  bakudocs:
+    build: 
+      context: .
+      args:
+        USER_ID: 1001
+        GROUP_ID: 1001
+    container_name: bakudocs-app
+    ports:
+      - "5001:5001"
+    volumes:
+      # Persistent data volumes
+      - ./data/uploads:/app/uploads
+      - ./data/logs:/app/logs
+      - ./data/databases:/app/databases
+      # Configuration files
+      - ./config.yaml:/app/config.yaml
+      - ./fileanalyzer-463911-e71c7f7288ad.json:/app/fileanalyzer-463911-e71c7f7288ad.json
+    environment:
+      - FLASK_ENV=production
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/fileanalyzer-463911-e71c7f7288ad.json
+      - PYTHONPATH=/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:5001/login', timeout=10)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  uploads_data:
+  logs_data:
+  databases_data:

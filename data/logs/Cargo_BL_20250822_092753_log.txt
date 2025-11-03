@@ -1,0 +1,408 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-08-22 09:24:31
+Analysis Type: Cargo_BL
+Language: en
+File Count: 22
+Custom Prompt: No
+
+File Preparation: EMA 2406 0802.pdf (118650 bytes)
+File Preparation: EMA 2406 0801.pdf (116058 bytes)
+File Preparation: EMA 2406 0703.pdf (848543 bytes)
+File Preparation: EMA 2406 0704.pdf (831711 bytes)
+File Preparation: EMA 2406 0702.pdf (780963 bytes)
+File Preparation: EMA 2406 0701.pdf (838505 bytes)
+File Preparation: EMA 2406 0601.pdf (1053846 bytes)
+File Preparation: EMA 2406 0501.pdf (884834 bytes)
+File Preparation: EMA 2406 0401.pdf (916142 bytes)
+File Preparation: EMA 2406 0301.pdf (102554 bytes)
+File Preparation: EMA 2406 0302.pdf (100981 bytes)
+File Preparation: EMA 2406 0201.pdf (101185 bytes)
+File Preparation: EMA 2406 0101.pdf (110866 bytes)
+File Preparation: EMA 2406 1202.pdf (859023 bytes)
+File Preparation: EMA 2406 1201.pdf (883057 bytes)
+File Preparation: EMA 2406 1004.pdf (82357 bytes)
+File Preparation: EMA 2406 1003.pdf (582189 bytes)
+File Preparation: EMA 2406 0901.pdf (926068 bytes)
+File Preparation: EMA 2406 1002.pdf (81580 bytes)
+File Preparation: EMA 2406 1001.pdf (91349 bytes)
+File Preparation: EMA 2406 0804.pdf (115043 bytes)
+File Preparation: EMA 2406 0803.pdf (115262 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: EMA 2406 0802.pdf
+  - Pages: 1
+  - Extracted Text Length: 5238 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0801.pdf
+  - Pages: 1
+  - Extracted Text Length: 5245 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0703.pdf
+  - Pages: 1
+  - Extracted Text Length: 3545 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0704.pdf
+  - Pages: 1
+  - Extracted Text Length: 3393 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0702.pdf
+  - Pages: 1
+  - Extracted Text Length: 2896 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0701.pdf
+  - Pages: 1
+  - Extracted Text Length: 3332 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0601.pdf
+  - Pages: 12
+  - Extracted Text Length: 83819 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0501.pdf
+  - Pages: 1
+  - Extracted Text Length: 5155 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0401.pdf
+  - Pages: 1
+  - Extracted Text Length: 5461 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0301.pdf
+  - Pages: 1
+  - Extracted Text Length: 3841 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0302.pdf
+  - Pages: 1
+  - Extracted Text Length: 3815 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0201.pdf
+  - Pages: 1
+  - Extracted Text Length: 4407 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0101.pdf
+  - Pages: 1
+  - Extracted Text Length: 4602 characters
+  - Status: Success
+OCR Extraction: EMA 2406 1202.pdf
+  - Pages: 1
+  - Extracted Text Length: 4666 characters
+  - Status: Success
+OCR Extraction: EMA 2406 1201.pdf
+  - Pages: 1
+  - Extracted Text Length: 4708 characters
+  - Status: Success
+OCR Extraction: EMA 2406 1004.pdf
+  - Pages: 1
+  - Extracted Text Length: 4828 characters
+  - Status: Success
+OCR Extraction: EMA 2406 1003.pdf
+  - Pages: 5
+  - Extracted Text Length: 29017 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0901.pdf
+  - Pages: 1
+  - Extracted Text Length: 5671 characters
+  - Status: Success
+OCR Extraction: EMA 2406 1002.pdf
+  - Pages: 1
+  - Extracted Text Length: 4908 characters
+  - Status: Success
+OCR Extraction: EMA 2406 1001.pdf
+  - Pages: 1
+  - Extracted Text Length: 5204 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0804.pdf
+  - Pages: 1
+  - Extracted Text Length: 5676 characters
+  - Status: Success
+OCR Extraction: EMA 2406 0803.pdf
+  - Pages: 1
+  - Extracted Text Length: 5217 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: EMA 2406 0802.pdf
+  - Tokens Used: 6401
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EMA 2406 0801.pdf
+  - Tokens Used: 5970
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EMA 2406 0703.pdf
+  - Tokens Used: 6023
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 921
+    * OBL release date=2024-06-28
+LLM Analysis: EMA 2406 0704.pdf
+  - Tokens Used: 5531
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 1063
+    * OBL release date=2024-06-28
+LLM Analysis: EMA 2406 0702.pdf
+  - Tokens Used: 5361
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EMA 2406 0701.pdf
+  - Tokens Used: 6008
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EMA 2406 0601.pdf
+  - Tokens Used: 28232
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 875
+    * B/L split quantity (MT)=2989.901
+LLM Analysis: EMA 2406 0501.pdf
+  - Tokens Used: 6413
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 1290
+    * B/L split quantity (MT)=497.419
+LLM Analysis: EMA 2406 0401.pdf
+  - Tokens Used: 6178
+  - Analysis Result: Success
+  - VLM Remediated Fields: 2 fields
+  - VLM Tokens 使用: 2386
+    * B/L split quantity (MT)=999.170
+    * OBL release date=2024-07-05
+LLM Analysis: EMA 2406 0301.pdf
+  - Tokens Used: 5928
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 1210
+    * OBL release date=2024-06-28
+LLM Analysis: EMA 2406 0302.pdf
+  - Tokens Used: 6593
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 901
+    * OBL release date=2024-06-28
+LLM Analysis: EMA 2406 0201.pdf
+  - Tokens Used: 6223
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EMA 2406 0101.pdf
+  - Tokens Used: 6145
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 935
+    * B/L split quantity (MT)=1,002.482
+LLM Analysis: EMA 2406 1202.pdf
+  - Tokens Used: 5830
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 1054
+    * OBL release date=2024-07-08
+LLM Analysis: EMA 2406 1201.pdf
+  - Tokens Used: 5964
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 1071
+    * OBL release date=2024-07-08
+LLM Analysis: EMA 2406 1004.pdf
+  - Tokens Used: 5813
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EMA 2406 1003.pdf
+  - Tokens Used: 14277
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EMA 2406 0901.pdf
+  - Tokens Used: 6304
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 1259
+    * B/L split quantity (MT)=1,999.914
+LLM Analysis: EMA 2406 1002.pdf
+  - Tokens Used: 5831
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EMA 2406 1001.pdf
+  - Tokens Used: 6481
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EMA 2406 0804.pdf
+  - Tokens Used: 6126
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EMA 2406 0803.pdf
+  - Tokens Used: 6592
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+
+=== Processing Summary ===
+Total Processing Time: 201.93 seconds
+Total Tokens Used: 177189
+Total Pages: 37
+Successfully Processed Files: 22
+
+=== Detailed File Processing Statistics ===
+File: EMA 2406 0802.pdf
+  - LLM Tokens: 6401
+  - VLM Tokens: 0
+  - Total Tokens: 6401
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EMA 2406 0801.pdf
+  - LLM Tokens: 5970
+  - VLM Tokens: 0
+  - Total Tokens: 5970
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EMA 2406 0703.pdf
+  - LLM Tokens: 6023
+  - VLM Tokens: 921
+  - Total Tokens: 6944
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date
+
+File: EMA 2406 0704.pdf
+  - LLM Tokens: 5531
+  - VLM Tokens: 1063
+  - Total Tokens: 6594
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date
+
+File: EMA 2406 0702.pdf
+  - LLM Tokens: 5361
+  - VLM Tokens: 0
+  - Total Tokens: 5361
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EMA 2406 0701.pdf
+  - LLM Tokens: 6008
+  - VLM Tokens: 0
+  - Total Tokens: 6008
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EMA 2406 0601.pdf
+  - LLM Tokens: 28232
+  - VLM Tokens: 875
+  - Total Tokens: 29107
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: EMA 2406 0501.pdf
+  - LLM Tokens: 6413
+  - VLM Tokens: 1290
+  - Total Tokens: 7703
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: EMA 2406 0401.pdf
+  - LLM Tokens: 6178
+  - VLM Tokens: 2386
+  - Total Tokens: 8564
+  - Successfully Extracted Fields: 11
+  - Missing Fields: 2
+  - VLM Remediated Fields: B/L split quantity (MT), OBL release date
+
+File: EMA 2406 0301.pdf
+  - LLM Tokens: 5928
+  - VLM Tokens: 1210
+  - Total Tokens: 7138
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date
+
+File: EMA 2406 0302.pdf
+  - LLM Tokens: 6593
+  - VLM Tokens: 901
+  - Total Tokens: 7494
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date
+
+File: EMA 2406 0201.pdf
+  - LLM Tokens: 6223
+  - VLM Tokens: 0
+  - Total Tokens: 6223
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EMA 2406 0101.pdf
+  - LLM Tokens: 6145
+  - VLM Tokens: 935
+  - Total Tokens: 7080
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: EMA 2406 1202.pdf
+  - LLM Tokens: 5830
+  - VLM Tokens: 1054
+  - Total Tokens: 6884
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date
+
+File: EMA 2406 1201.pdf
+  - LLM Tokens: 5964
+  - VLM Tokens: 1071
+  - Total Tokens: 7035
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date
+
+File: EMA 2406 1004.pdf
+  - LLM Tokens: 5813
+  - VLM Tokens: 0
+  - Total Tokens: 5813
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EMA 2406 1003.pdf
+  - LLM Tokens: 14277
+  - VLM Tokens: 0
+  - Total Tokens: 14277
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EMA 2406 0901.pdf
+  - LLM Tokens: 6304
+  - VLM Tokens: 1259
+  - Total Tokens: 7563
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: EMA 2406 1002.pdf
+  - LLM Tokens: 5831
+  - VLM Tokens: 0
+  - Total Tokens: 5831
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EMA 2406 1001.pdf
+  - LLM Tokens: 6481
+  - VLM Tokens: 0
+  - Total Tokens: 6481
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EMA 2406 0804.pdf
+  - LLM Tokens: 6126
+  - VLM Tokens: 0
+  - Total Tokens: 6126
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: EMA 2406 0803.pdf
+  - LLM Tokens: 6592
+  - VLM Tokens: 0
+  - Total Tokens: 6592
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+End Time: 2025-08-22 09:27:53
+Output Excel: Cargo_BL_20250822_092753.xlsx
+Output Log: Cargo_BL_20250822_092753_log.txt

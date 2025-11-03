@@ -1,0 +1,178 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-09-05 08:44:47
+Analysis Type: Cargo_BL
+Language: en
+File Count: 9
+Custom Prompt: No
+
+File Preparation: DAM 2506 0301 - 2079,851MT  PHENOL.pdf (809376 bytes)
+File Preparation: DAM 2506 0302 - 2079,851 MT  PHENOL.pdf (797586 bytes)
+File Preparation: DAM 2506 0303 - 1039,926MT  PHENOL.pdf (772579 bytes)
+File Preparation: DAM 2506 0401 - 500 MT DMF TAIZHOU - KANDLA.pdf (3638792 bytes)
+File Preparation: DAM 2506 0402 - 1997 MT DMF TAIZHOU - KANDLA.pdf (3626253 bytes)
+File Preparation: DAM 2506 0601 - 991 MT BUTYL ACETATE JINGJIANG - KANDLA.pdf (2541370 bytes)
+File Preparation: DAN 2506 0501 -2911,700 MT - OX.pdf (826433 bytes)
+File Preparation: DAM 2506 0101 - 3666 MT AA JINGJIANG - KANDLA.pdf (2547598 bytes)
+File Preparation: DAM 2506 0201 - 1474 MT NBA TAIZHOU - KANDLA.pdf (3483927 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: DAM 2506 0301 - 2079,851MT  PHENOL.pdf
+  - Pages: 7
+  - Extracted Text Length: 31285 characters
+  - Status: Success
+OCR Extraction: DAM 2506 0302 - 2079,851 MT  PHENOL.pdf
+  - Pages: 7
+  - Extracted Text Length: 31287 characters
+  - Status: Success
+OCR Extraction: DAM 2506 0303 - 1039,926MT  PHENOL.pdf
+  - Pages: 7
+  - Extracted Text Length: 31443 characters
+  - Status: Success
+OCR Extraction: DAM 2506 0401 - 500 MT DMF TAIZHOU - KANDLA.pdf
+  - Pages: 9
+  - Extracted Text Length: 54516 characters
+  - Status: Success
+OCR Extraction: DAM 2506 0402 - 1997 MT DMF TAIZHOU - KANDLA.pdf
+  - Pages: 9
+  - Extracted Text Length: 54627 characters
+  - Status: Success
+OCR Extraction: DAM 2506 0601 - 991 MT BUTYL ACETATE JINGJIANG - KANDLA.pdf
+  - Pages: 9
+  - Extracted Text Length: 54156 characters
+  - Status: Success
+OCR Extraction: DAN 2506 0501 -2911,700 MT - OX.pdf
+  - Pages: 7
+  - Extracted Text Length: 32646 characters
+  - Status: Success
+OCR Extraction: DAM 2506 0101 - 3666 MT AA JINGJIANG - KANDLA.pdf
+  - Pages: 9
+  - Extracted Text Length: 53896 characters
+  - Status: Success
+OCR Extraction: DAM 2506 0201 - 1474 MT NBA TAIZHOU - KANDLA.pdf
+  - Pages: 9
+  - Extracted Text Length: 52672 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: DAM 2506 0301 - 2079,851MT  PHENOL.pdf
+  - Tokens Used: 17142
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: DAM 2506 0302 - 2079,851 MT  PHENOL.pdf
+  - Tokens Used: 17250
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: DAM 2506 0303 - 1039,926MT  PHENOL.pdf
+  - Tokens Used: 16941
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: DAM 2506 0401 - 500 MT DMF TAIZHOU - KANDLA.pdf
+  - Tokens Used: 18025
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: DAM 2506 0402 - 1997 MT DMF TAIZHOU - KANDLA.pdf
+  - Tokens Used: 18268
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: DAM 2506 0601 - 991 MT BUTYL ACETATE JINGJIANG - KANDLA.pdf
+  - Tokens Used: 17820
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 919
+    * B/L split quantity (MT)=991.121
+LLM Analysis: DAN 2506 0501 -2911,700 MT - OX.pdf
+  - Tokens Used: 16690
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 930
+    * B/L split quantity (MT)=2,911.700
+LLM Analysis: DAM 2506 0101 - 3666 MT AA JINGJIANG - KANDLA.pdf
+  - Tokens Used: 17477
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 918
+    * B/L split quantity (MT)=3673.141
+LLM Analysis: DAM 2506 0201 - 1474 MT NBA TAIZHOU - KANDLA.pdf
+  - Tokens Used: 17048
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 707
+    * B/L split quantity (MT)=1474.946
+
+=== Processing Summary ===
+Total Processing Time: 140.96 seconds
+Total Tokens Used: 160135
+Total Pages: 73
+Successfully Processed Files: 9
+
+=== Detailed File Processing Statistics ===
+File: DAM 2506 0301 - 2079,851MT  PHENOL.pdf
+  - LLM Tokens: 17142
+  - VLM Tokens: 0
+  - Total Tokens: 17142
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: DAM 2506 0302 - 2079,851 MT  PHENOL.pdf
+  - LLM Tokens: 17250
+  - VLM Tokens: 0
+  - Total Tokens: 17250
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: DAM 2506 0303 - 1039,926MT  PHENOL.pdf
+  - LLM Tokens: 16941
+  - VLM Tokens: 0
+  - Total Tokens: 16941
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: DAM 2506 0401 - 500 MT DMF TAIZHOU - KANDLA.pdf
+  - LLM Tokens: 18025
+  - VLM Tokens: 0
+  - Total Tokens: 18025
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: DAM 2506 0402 - 1997 MT DMF TAIZHOU - KANDLA.pdf
+  - LLM Tokens: 18268
+  - VLM Tokens: 0
+  - Total Tokens: 18268
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: DAM 2506 0601 - 991 MT BUTYL ACETATE JINGJIANG - KANDLA.pdf
+  - LLM Tokens: 17820
+  - VLM Tokens: 919
+  - Total Tokens: 18739
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DAN 2506 0501 -2911,700 MT - OX.pdf
+  - LLM Tokens: 16690
+  - VLM Tokens: 930
+  - Total Tokens: 17620
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DAM 2506 0101 - 3666 MT AA JINGJIANG - KANDLA.pdf
+  - LLM Tokens: 17477
+  - VLM Tokens: 918
+  - Total Tokens: 18395
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DAM 2506 0201 - 1474 MT NBA TAIZHOU - KANDLA.pdf
+  - LLM Tokens: 17048
+  - VLM Tokens: 707
+  - Total Tokens: 17755
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+End Time: 2025-09-05 08:47:08
+Output Excel: Cargo_BL_20250905_084708.xlsx
+Output Log: Cargo_BL_20250905_084708_log.txt

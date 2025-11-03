@@ -1,0 +1,60 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-09-04 11:06:50
+Analysis Type: Cargo_BL
+Language: en
+File Count: 2
+Custom Prompt: No
+
+File Preparation: BTR 2501 0101 - Koper.PDF (2079788 bytes)
+File Preparation: BTR 2501 0102 - Constanta.PDF (2104432 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: BTR 2501 0101 - Koper.PDF
+  - Pages: 8
+  - Extracted Text Length: 25775 characters
+  - Status: Success
+OCR Extraction: BTR 2501 0102 - Constanta.PDF
+  - Pages: 8
+  - Extracted Text Length: 26084 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: BTR 2501 0101 - Koper.PDF
+  - Tokens Used: 11115
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 2127
+    * Charterer=未提供
+LLM Analysis: BTR 2501 0102 - Constanta.PDF
+  - Tokens Used: 11876
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 4086
+    * Charterer=此文件並未指明 Charterer。
+
+=== Processing Summary ===
+Total Processing Time: 93.4 seconds
+Total Tokens Used: 29204
+Total Pages: 16
+Successfully Processed Files: 2
+
+=== Detailed File Processing Statistics ===
+File: BTR 2501 0101 - Koper.PDF
+  - LLM Tokens: 11115
+  - VLM Tokens: 2127
+  - Total Tokens: 13242
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: Charterer
+
+File: BTR 2501 0102 - Constanta.PDF
+  - LLM Tokens: 11876
+  - VLM Tokens: 4086
+  - Total Tokens: 15962
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: Charterer
+
+End Time: 2025-09-04 11:08:24
+Output Excel: Cargo_BL_20250904_110824.xlsx
+Output Log: Cargo_BL_20250904_110824_log.txt

@@ -1,0 +1,411 @@
+=== 檔案分析處理日誌 ===
+開始時間: 2025-08-10 11:44:17
+分析類型: Cargo_BL
+語言: zh
+檔案數量: 22
+自定義提示詞: 否
+
+檔案準備: EMA 2406 0802.pdf (118650 bytes)
+檔案準備: EMA 2406 0801.pdf (116058 bytes)
+檔案準備: EMA 2406 0703.pdf (848543 bytes)
+檔案準備: EMA 2406 0704.pdf (831711 bytes)
+檔案準備: EMA 2406 0702.pdf (780963 bytes)
+檔案準備: EMA 2406 0701.pdf (838505 bytes)
+檔案準備: EMA 2406 0601.pdf (1053846 bytes)
+檔案準備: EMA 2406 0501.pdf (884834 bytes)
+檔案準備: EMA 2406 0401.pdf (916142 bytes)
+檔案準備: EMA 2406 0301.pdf (102554 bytes)
+檔案準備: EMA 2406 0302.pdf (100981 bytes)
+檔案準備: EMA 2406 0201.pdf (101185 bytes)
+檔案準備: EMA 2406 0101.pdf (110866 bytes)
+檔案準備: EMA 2406 1202.pdf (859023 bytes)
+檔案準備: EMA 2406 1201.pdf (883057 bytes)
+檔案準備: EMA 2406 1004.pdf (82357 bytes)
+檔案準備: EMA 2406 1003.pdf (582189 bytes)
+檔案準備: EMA 2406 0901.pdf (926068 bytes)
+檔案準備: EMA 2406 1002.pdf (81580 bytes)
+檔案準備: EMA 2406 1001.pdf (91349 bytes)
+檔案準備: EMA 2406 0804.pdf (115043 bytes)
+檔案準備: EMA 2406 0803.pdf (115262 bytes)
+
+=== OCR 文字提取階段 ===
+OCR 提取: EMA 2406 0802.pdf
+  - 頁數: 1
+  - 提取文字長度: 5243 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0801.pdf
+  - 頁數: 1
+  - 提取文字長度: 5243 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0703.pdf
+  - 頁數: 1
+  - 提取文字長度: 3538 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0704.pdf
+  - 頁數: 1
+  - 提取文字長度: 3394 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0702.pdf
+  - 頁數: 1
+  - 提取文字長度: 2909 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0701.pdf
+  - 頁數: 1
+  - 提取文字長度: 3327 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0601.pdf
+  - 頁數: 12
+  - 提取文字長度: 83889 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0501.pdf
+  - 頁數: 1
+  - 提取文字長度: 5147 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0401.pdf
+  - 頁數: 1
+  - 提取文字長度: 5451 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0301.pdf
+  - 頁數: 1
+  - 提取文字長度: 3827 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0302.pdf
+  - 頁數: 1
+  - 提取文字長度: 3822 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0201.pdf
+  - 頁數: 1
+  - 提取文字長度: 4427 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0101.pdf
+  - 頁數: 1
+  - 提取文字長度: 4599 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 1202.pdf
+  - 頁數: 1
+  - 提取文字長度: 4668 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 1201.pdf
+  - 頁數: 1
+  - 提取文字長度: 4730 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 1004.pdf
+  - 頁數: 1
+  - 提取文字長度: 4827 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 1003.pdf
+  - 頁數: 5
+  - 提取文字長度: 29003 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0901.pdf
+  - 頁數: 1
+  - 提取文字長度: 5661 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 1002.pdf
+  - 頁數: 1
+  - 提取文字長度: 4885 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 1001.pdf
+  - 頁數: 1
+  - 提取文字長度: 5204 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0804.pdf
+  - 頁數: 1
+  - 提取文字長度: 5670 字符
+  - 狀態: 成功
+OCR 提取: EMA 2406 0803.pdf
+  - 頁數: 1
+  - 提取文字長度: 5258 字符
+  - 狀態: 成功
+
+=== LLM 分析階段 ===
+LLM 分析: EMA 2406 0802.pdf
+  - Tokens 使用: 6197
+  - 分析結果: 成功
+  - VLM 補救: 無需要
+LLM 分析: EMA 2406 0801.pdf
+  - Tokens 使用: 5574
+  - 分析結果: 成功
+  - VLM 補救: 無需要
+LLM 分析: EMA 2406 0703.pdf
+  - Tokens 使用: 6027
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 1107
+    * OBL release date=2024-06-28
+LLM 分析: EMA 2406 0704.pdf
+  - Tokens 使用: 5117
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 909
+    * OBL release date=2024-06-28
+LLM 分析: EMA 2406 0702.pdf
+  - Tokens 使用: 5202
+  - 分析結果: 成功
+  - VLM 補救: 無需要
+LLM 分析: EMA 2406 0701.pdf
+  - Tokens 使用: 5345
+  - 分析結果: 成功
+  - VLM 補救: 無需要
+LLM 分析: EMA 2406 0601.pdf
+  - Tokens 使用: 28970
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 1027
+    * B/L split quantity (MT)=2989.901
+LLM 分析: EMA 2406 0501.pdf
+  - Tokens 使用: 5495
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 2174
+    * B/L split quantity (MT)=497.419
+LLM 分析: EMA 2406 0401.pdf
+  - Tokens 使用: 6295
+  - 分析結果: 成功
+  - VLM 補救欄位: 2 個
+  - VLM Tokens 使用: 2411
+    * B/L split quantity (MT)=999.170 MTS
+    * OBL release date=2024-07-05
+LLM 分析: EMA 2406 0301.pdf
+  - Tokens 使用: 6318
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 1131
+    * OBL release date=2024-06-28
+LLM 分析: EMA 2406 0302.pdf
+  - Tokens 使用: 6867
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 1150
+    * OBL release date=2024-06-28
+LLM 分析: EMA 2406 0201.pdf
+  - Tokens 使用: 7065
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 2105
+    * B/L split quantity (MT)=1,444.812
+LLM 分析: EMA 2406 0101.pdf
+  - Tokens 使用: 7030
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 1656
+    * B/L split quantity (MT)=1,002.482
+LLM 分析: EMA 2406 1202.pdf
+  - Tokens 使用: 6687
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 1194
+    * OBL release date=2024-07-08
+LLM 分析: EMA 2406 1201.pdf
+  - Tokens 使用: 6415
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 1202
+    * OBL release date=2024-07-08
+LLM 分析: EMA 2406 1004.pdf
+  - Tokens 使用: 5957
+  - 分析結果: 成功
+  - VLM 補救: 無需要
+LLM 分析: EMA 2406 1003.pdf
+  - Tokens 使用: 13828
+  - 分析結果: 成功
+  - VLM 補救: 無需要
+LLM 分析: EMA 2406 0901.pdf
+  - Tokens 使用: 6502
+  - 分析結果: 成功
+  - VLM 補救欄位: 1 個
+  - VLM Tokens 使用: 1285
+    * B/L split quantity (MT)=1,999.914
+LLM 分析: EMA 2406 1002.pdf
+  - Tokens 使用: 6327
+  - 分析結果: 成功
+  - VLM 補救: 無需要
+LLM 分析: EMA 2406 1001.pdf
+  - Tokens 使用: 6713
+  - 分析結果: 成功
+  - VLM 補救: 無需要
+LLM 分析: EMA 2406 0804.pdf
+  - Tokens 使用: 6475
+  - 分析結果: 成功
+  - VLM 補救: 無需要
+LLM 分析: EMA 2406 0803.pdf
+  - Tokens 使用: 6192
+  - 分析結果: 成功
+  - VLM 補救: 無需要
+
+=== 處理摘要 ===
+總處理時間: 265.25 秒
+總 Tokens 使用: 183949
+總頁數: 37
+成功處理檔案: 22
+
+=== 詳細檔案處理統計 ===
+檔案: EMA 2406 0802.pdf
+  - LLM Tokens: 6197
+  - VLM Tokens: 0
+  - 總 Tokens: 6197
+  - 成功提取欄位: 14
+  - 缺失欄位: 0
+
+檔案: EMA 2406 0801.pdf
+  - LLM Tokens: 5574
+  - VLM Tokens: 0
+  - 總 Tokens: 5574
+  - 成功提取欄位: 14
+  - 缺失欄位: 0
+
+檔案: EMA 2406 0703.pdf
+  - LLM Tokens: 6027
+  - VLM Tokens: 1107
+  - 總 Tokens: 7134
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: OBL release date
+
+檔案: EMA 2406 0704.pdf
+  - LLM Tokens: 5117
+  - VLM Tokens: 909
+  - 總 Tokens: 6026
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: OBL release date
+
+檔案: EMA 2406 0702.pdf
+  - LLM Tokens: 5202
+  - VLM Tokens: 0
+  - 總 Tokens: 5202
+  - 成功提取欄位: 14
+  - 缺失欄位: 0
+
+檔案: EMA 2406 0701.pdf
+  - LLM Tokens: 5345
+  - VLM Tokens: 0
+  - 總 Tokens: 5345
+  - 成功提取欄位: 14
+  - 缺失欄位: 0
+
+檔案: EMA 2406 0601.pdf
+  - LLM Tokens: 28970
+  - VLM Tokens: 1027
+  - 總 Tokens: 29997
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: B/L split quantity (MT)
+
+檔案: EMA 2406 0501.pdf
+  - LLM Tokens: 5495
+  - VLM Tokens: 2174
+  - 總 Tokens: 7669
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: B/L split quantity (MT)
+
+檔案: EMA 2406 0401.pdf
+  - LLM Tokens: 6295
+  - VLM Tokens: 2411
+  - 總 Tokens: 8706
+  - 成功提取欄位: 12
+  - 缺失欄位: 2
+  - VLM 補救欄位: B/L split quantity (MT), OBL release date
+
+檔案: EMA 2406 0301.pdf
+  - LLM Tokens: 6318
+  - VLM Tokens: 1131
+  - 總 Tokens: 7449
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: OBL release date
+
+檔案: EMA 2406 0302.pdf
+  - LLM Tokens: 6867
+  - VLM Tokens: 1150
+  - 總 Tokens: 8017
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: OBL release date
+
+檔案: EMA 2406 0201.pdf
+  - LLM Tokens: 7065
+  - VLM Tokens: 2105
+  - 總 Tokens: 9170
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: B/L split quantity (MT)
+
+檔案: EMA 2406 0101.pdf
+  - LLM Tokens: 7030
+  - VLM Tokens: 1656
+  - 總 Tokens: 8686
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: B/L split quantity (MT)
+
+檔案: EMA 2406 1202.pdf
+  - LLM Tokens: 6687
+  - VLM Tokens: 1194
+  - 總 Tokens: 7881
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: OBL release date
+
+檔案: EMA 2406 1201.pdf
+  - LLM Tokens: 6415
+  - VLM Tokens: 1202
+  - 總 Tokens: 7617
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: OBL release date
+
+檔案: EMA 2406 1004.pdf
+  - LLM Tokens: 5957
+  - VLM Tokens: 0
+  - 總 Tokens: 5957
+  - 成功提取欄位: 14
+  - 缺失欄位: 0
+
+檔案: EMA 2406 1003.pdf
+  - LLM Tokens: 13828
+  - VLM Tokens: 0
+  - 總 Tokens: 13828
+  - 成功提取欄位: 14
+  - 缺失欄位: 0
+
+檔案: EMA 2406 0901.pdf
+  - LLM Tokens: 6502
+  - VLM Tokens: 1285
+  - 總 Tokens: 7787
+  - 成功提取欄位: 13
+  - 缺失欄位: 1
+  - VLM 補救欄位: B/L split quantity (MT)
+
+檔案: EMA 2406 1002.pdf
+  - LLM Tokens: 6327
+  - VLM Tokens: 0
+  - 總 Tokens: 6327
+  - 成功提取欄位: 14
+  - 缺失欄位: 0
+
+檔案: EMA 2406 1001.pdf
+  - LLM Tokens: 6713
+  - VLM Tokens: 0
+  - 總 Tokens: 6713
+  - 成功提取欄位: 14
+  - 缺失欄位: 0
+
+檔案: EMA 2406 0804.pdf
+  - LLM Tokens: 6475
+  - VLM Tokens: 0
+  - 總 Tokens: 6475
+  - 成功提取欄位: 14
+  - 缺失欄位: 0
+
+檔案: EMA 2406 0803.pdf
+  - LLM Tokens: 6192
+  - VLM Tokens: 0
+  - 總 Tokens: 6192
+  - 成功提取欄位: 14
+  - 缺失欄位: 0
+
+結束時間: 2025-08-10 11:48:42
+輸出 Excel: Cargo_BL_20250810_114842.xlsx
+輸出 Log: Cargo_BL_20250810_114842_log.txt

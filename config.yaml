@@ -1,0 +1,65 @@
+langs:
+  en:
+    select_file: Select File(s)
+    select_file_label: 'Please select file(s):'
+    preview_placeholder: File content preview... (first file)
+    analyze: Analyze Files
+    progress: Progress
+    export: Export to Excel
+    quit: Quit
+    edit_col: Edit Column Name
+    rename_col: "Rename column '{old}' to:"
+    saved: Saved
+    excel_saved: 'Excel file saved to: {path}'
+    error: Error
+    batch_failed: 'Batch analysis failed.\nError message: {msg}'
+    no_results: No Results
+    no_data: No data was extracted from the files.
+    copy_error: Copy Error
+    analysis_complete: Analysis Complete
+    choose_save: Analysis complete! Please choose where to save the Excel file.
+    save_excel: Save Excel
+    excel_files: Excel Files (*.xlsx)
+    window_title: Smart File Analyzer & Excel Export Tool
+    remove_file: Remove Selected File
+    adv_options: Advanced Options
+    history: History
+    clean_history: Clean History
+    filename_checkbox: Include filename in Excel output
+    time: Time
+    files: Files
+    rows: Rows
+    cols: Columns
+    headers: Headers
+    tokens: Tokens
+    download: Download
+    analyzing: Analyzing...
+    logo_checkbox: Include logo in Excel output
+    manual_insertion: Manual Insertion
+    add_row: Add Row
+    add_column: Add Column
+    remove_row: Remove Row
+    remove_column: Remove Column
+    row: Row
+    column: Column
+    value: Value
+
+# Prompts are now imported from analyzers/services/prompts
+# This section is kept for backward compatibility but will be overridden by SERVICE_PROMPTS
+# All prompts content has been moved to:
+# - analyzers/services/prompts/cargo_bl.py
+# - analyzers/services/prompts/invoice.py  
+# - analyzers/services/prompts/table_analysis.py
+# - analyzers/services/prompts/calendar.py
+
+ocr_lang: eng    # Default OCR language, can be 'eng', 'chi_tra', 'eng+chi_tra' or leave empty
+
+analyzers:
+  Cargo_BL:
+    # Prompts are imported from analyzers/services/prompts/cargo_bl.py
+  Invoice:
+    # Prompts are imported from analyzers/services/prompts/invoice.py
+  Table Analysis:
+    # Prompts are imported from analyzers/services/prompts/table_analysis.py
+  Calendar:
+    # Prompts are imported from analyzers/services/prompts/calendar.py

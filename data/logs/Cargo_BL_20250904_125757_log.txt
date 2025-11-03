@@ -1,0 +1,588 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-09-04 12:47:33
+Analysis Type: Cargo_BL
+Language: en
+File Count: 35
+Custom Prompt: No
+
+File Preparation: ETO 2504 0202 - MEOH.pdf (2669532 bytes)
+File Preparation: ETO 2504 0203 - MEOH.pdf (2669664 bytes)
+File Preparation: ETO 2504 0204 - MEOH.pdf (2647782 bytes)
+File Preparation: ETO 2504 0205 - MEOH.pdf (2642207 bytes)
+File Preparation: ETO 2504 0206 - MEOH.pdf (2682725 bytes)
+File Preparation: ETO 2504 0207 - MEOH.pdf (2664271 bytes)
+File Preparation: ETO 2504 0301 - AA.pdf (2988828 bytes)
+File Preparation: ETO 2504 0302 - AA.pdf (3030182 bytes)
+File Preparation: ETO 2504 0303 - AA.pdf (2956351 bytes)
+File Preparation: ETO 2504 0304 - AA.pdf (3061936 bytes)
+File Preparation: ETO 2504 0305 - AA.pdf (3064376 bytes)
+File Preparation: ETO 2504 0306 - AA.pdf (2987749 bytes)
+File Preparation: ETO 2504 0307 - AA.pdf (2991251 bytes)
+File Preparation: ETO 2504 0401 - BA.pdf (2590079 bytes)
+File Preparation: ETO 2504 0501 - MMA.pdf (3043173 bytes)
+File Preparation: ETO 2504 0502 - MMA.pdf (3084942 bytes)
+File Preparation: ETO 2504 0503 - MMA.pdf (3062329 bytes)
+File Preparation: ETO 2504 0504 - MMA.pdf (3060747 bytes)
+File Preparation: ETO 2504 0101 - VAM.pdf (2246794 bytes)
+File Preparation: ETO 2504 0102 - VAM.pdf (2180702 bytes)
+File Preparation: ETO 2504 0103 - VAM.pdf (2218137 bytes)
+File Preparation: ETO 2504 0104 - VAM.pdf (2219474 bytes)
+File Preparation: ETO 2504 0105 - VAM.pdf (2207913 bytes)
+File Preparation: ETO 2504 0106 - VAM.pdf (2189400 bytes)
+File Preparation: ETO 2504 0107 - VAM.pdf (2191026 bytes)
+File Preparation: ETO 2504 0108 - VAM.pdf (2207355 bytes)
+File Preparation: ETO 2504 0109 - VAM.pdf (2183768 bytes)
+File Preparation: ETO 2504 0110 - VAM.pdf (2276324 bytes)
+File Preparation: ETO 2504 0111 - VAM.pdf (2204951 bytes)
+File Preparation: ETO 2504 0112 - VAM.pdf (2194952 bytes)
+File Preparation: ETO 2504 0113 - VAM.pdf (2202246 bytes)
+File Preparation: ETO 2504 0114 - VAM.pdf (2201811 bytes)
+File Preparation: ETO 2504 0115 - VAM.pdf (2186659 bytes)
+File Preparation: ETO 2504 0116 - VAM.pdf (2219931 bytes)
+File Preparation: ETO 2504 0201 - MEOH.pdf (2584043 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: ETO 2504 0202 - MEOH.pdf
+  - Pages: 12
+  - Extracted Text Length: 80964 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0203 - MEOH.pdf
+  - Pages: 12
+  - Extracted Text Length: 80614 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0204 - MEOH.pdf
+  - Pages: 12
+  - Extracted Text Length: 80938 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0205 - MEOH.pdf
+  - Pages: 12
+  - Extracted Text Length: 80767 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0206 - MEOH.pdf
+  - Pages: 12
+  - Extracted Text Length: 81264 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0207 - MEOH.pdf
+  - Pages: 12
+  - Extracted Text Length: 81324 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0301 - AA.pdf
+  - Pages: 12
+  - Extracted Text Length: 81732 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0302 - AA.pdf
+  - Pages: 12
+  - Extracted Text Length: 82330 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0303 - AA.pdf
+  - Pages: 12
+  - Extracted Text Length: 82865 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0304 - AA.pdf
+  - Pages: 12
+  - Extracted Text Length: 83195 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0305 - AA.pdf
+  - Pages: 12
+  - Extracted Text Length: 81455 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0306 - AA.pdf
+  - Pages: 12
+  - Extracted Text Length: 81724 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0307 - AA.pdf
+  - Pages: 12
+  - Extracted Text Length: 81644 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0401 - BA.pdf
+  - Pages: 12
+  - Extracted Text Length: 79183 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0501 - MMA.pdf
+  - Pages: 12
+  - Extracted Text Length: 81644 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0502 - MMA.pdf
+  - Pages: 12
+  - Extracted Text Length: 81495 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0503 - MMA.pdf
+  - Pages: 12
+  - Extracted Text Length: 81580 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0504 - MMA.pdf
+  - Pages: 12
+  - Extracted Text Length: 81560 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0101 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81585 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0102 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 80949 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0103 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81423 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0104 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81881 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0105 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81271 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0106 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81213 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0107 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81202 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0108 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81511 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0109 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81156 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0110 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81959 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0111 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81348 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0112 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81740 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0113 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81728 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0114 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81249 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0115 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 81259 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0116 - VAM.pdf
+  - Pages: 12
+  - Extracted Text Length: 82096 characters
+  - Status: Success
+OCR Extraction: ETO 2504 0201 - MEOH.pdf
+  - Pages: 12
+  - Extracted Text Length: 79591 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: ETO 2504 0202 - MEOH.pdf
+  - Tokens Used: 24627
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0203 - MEOH.pdf
+  - Tokens Used: 24252
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0204 - MEOH.pdf
+  - Tokens Used: 25035
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0205 - MEOH.pdf
+  - Tokens Used: 24205
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0206 - MEOH.pdf
+  - Tokens Used: 25665
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0207 - MEOH.pdf
+  - Tokens Used: 24478
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0301 - AA.pdf
+  - Tokens Used: 25327
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0302 - AA.pdf
+  - Tokens Used: 26029
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0303 - AA.pdf
+  - Tokens Used: 26146
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0304 - AA.pdf
+  - Tokens Used: 25855
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0305 - AA.pdf
+  - Tokens Used: 26228
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0306 - AA.pdf
+  - Tokens Used: 25878
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0307 - AA.pdf
+  - Tokens Used: 26292
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 1632
+    * Stow=空白
+LLM Analysis: ETO 2504 0401 - BA.pdf
+  - Tokens Used: 24318
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 787
+    * B/L quantity (MT)=2,087.863
+LLM Analysis: ETO 2504 0501 - MMA.pdf
+  - Tokens Used: 25569
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0502 - MMA.pdf
+  - Tokens Used: 27058
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0503 - MMA.pdf
+  - Tokens Used: 25523
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0504 - MMA.pdf
+  - Tokens Used: 26370
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0101 - VAM.pdf
+  - Tokens Used: 27840
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0102 - VAM.pdf
+  - Tokens Used: 26981
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0103 - VAM.pdf
+  - Tokens Used: 27350
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0104 - VAM.pdf
+  - Tokens Used: 28491
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0105 - VAM.pdf
+  - Tokens Used: 27849
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0106 - VAM.pdf
+  - Tokens Used: 28430
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0107 - VAM.pdf
+  - Tokens Used: 27307
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0108 - VAM.pdf
+  - Tokens Used: 29645
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0109 - VAM.pdf
+  - Tokens Used: 27572
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0110 - VAM.pdf
+  - Tokens Used: 27314
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0111 - VAM.pdf
+  - Tokens Used: 27131
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0112 - VAM.pdf
+  - Tokens Used: 27267
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0113 - VAM.pdf
+  - Tokens Used: 27441
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0114 - VAM.pdf
+  - Tokens Used: 27222
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0115 - VAM.pdf
+  - Tokens Used: 27730
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0116 - VAM.pdf
+  - Tokens Used: 27874
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2504 0201 - MEOH.pdf
+  - Tokens Used: 23881
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+
+=== Processing Summary ===
+Total Processing Time: 623.24 seconds
+Total Tokens Used: 928599
+Total Pages: 420
+Successfully Processed Files: 35
+
+=== Detailed File Processing Statistics ===
+File: ETO 2504 0202 - MEOH.pdf
+  - LLM Tokens: 24627
+  - VLM Tokens: 0
+  - Total Tokens: 24627
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0203 - MEOH.pdf
+  - LLM Tokens: 24252
+  - VLM Tokens: 0
+  - Total Tokens: 24252
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0204 - MEOH.pdf
+  - LLM Tokens: 25035
+  - VLM Tokens: 0
+  - Total Tokens: 25035
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0205 - MEOH.pdf
+  - LLM Tokens: 24205
+  - VLM Tokens: 0
+  - Total Tokens: 24205
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0206 - MEOH.pdf
+  - LLM Tokens: 25665
+  - VLM Tokens: 0
+  - Total Tokens: 25665
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0207 - MEOH.pdf
+  - LLM Tokens: 24478
+  - VLM Tokens: 0
+  - Total Tokens: 24478
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0301 - AA.pdf
+  - LLM Tokens: 25327
+  - VLM Tokens: 0
+  - Total Tokens: 25327
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0302 - AA.pdf
+  - LLM Tokens: 26029
+  - VLM Tokens: 0
+  - Total Tokens: 26029
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0303 - AA.pdf
+  - LLM Tokens: 26146
+  - VLM Tokens: 0
+  - Total Tokens: 26146
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0304 - AA.pdf
+  - LLM Tokens: 25855
+  - VLM Tokens: 0
+  - Total Tokens: 25855
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0305 - AA.pdf
+  - LLM Tokens: 26228
+  - VLM Tokens: 0
+  - Total Tokens: 26228
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0306 - AA.pdf
+  - LLM Tokens: 25878
+  - VLM Tokens: 0
+  - Total Tokens: 25878
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0307 - AA.pdf
+  - LLM Tokens: 26292
+  - VLM Tokens: 1632
+  - Total Tokens: 27924
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: Stow
+
+File: ETO 2504 0401 - BA.pdf
+  - LLM Tokens: 24318
+  - VLM Tokens: 787
+  - Total Tokens: 25105
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L quantity (MT)
+
+File: ETO 2504 0501 - MMA.pdf
+  - LLM Tokens: 25569
+  - VLM Tokens: 0
+  - Total Tokens: 25569
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0502 - MMA.pdf
+  - LLM Tokens: 27058
+  - VLM Tokens: 0
+  - Total Tokens: 27058
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0503 - MMA.pdf
+  - LLM Tokens: 25523
+  - VLM Tokens: 0
+  - Total Tokens: 25523
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0504 - MMA.pdf
+  - LLM Tokens: 26370
+  - VLM Tokens: 0
+  - Total Tokens: 26370
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0101 - VAM.pdf
+  - LLM Tokens: 27840
+  - VLM Tokens: 0
+  - Total Tokens: 27840
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0102 - VAM.pdf
+  - LLM Tokens: 26981
+  - VLM Tokens: 0
+  - Total Tokens: 26981
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0103 - VAM.pdf
+  - LLM Tokens: 27350
+  - VLM Tokens: 0
+  - Total Tokens: 27350
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0104 - VAM.pdf
+  - LLM Tokens: 28491
+  - VLM Tokens: 0
+  - Total Tokens: 28491
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0105 - VAM.pdf
+  - LLM Tokens: 27849
+  - VLM Tokens: 0
+  - Total Tokens: 27849
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0106 - VAM.pdf
+  - LLM Tokens: 28430
+  - VLM Tokens: 0
+  - Total Tokens: 28430
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0107 - VAM.pdf
+  - LLM Tokens: 27307
+  - VLM Tokens: 0
+  - Total Tokens: 27307
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0108 - VAM.pdf
+  - LLM Tokens: 29645
+  - VLM Tokens: 0
+  - Total Tokens: 29645
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0109 - VAM.pdf
+  - LLM Tokens: 27572
+  - VLM Tokens: 0
+  - Total Tokens: 27572
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0110 - VAM.pdf
+  - LLM Tokens: 27314
+  - VLM Tokens: 0
+  - Total Tokens: 27314
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0111 - VAM.pdf
+  - LLM Tokens: 27131
+  - VLM Tokens: 0
+  - Total Tokens: 27131
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0112 - VAM.pdf
+  - LLM Tokens: 27267
+  - VLM Tokens: 0
+  - Total Tokens: 27267
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0113 - VAM.pdf
+  - LLM Tokens: 27441
+  - VLM Tokens: 0
+  - Total Tokens: 27441
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0114 - VAM.pdf
+  - LLM Tokens: 27222
+  - VLM Tokens: 0
+  - Total Tokens: 27222
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0115 - VAM.pdf
+  - LLM Tokens: 27730
+  - VLM Tokens: 0
+  - Total Tokens: 27730
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0116 - VAM.pdf
+  - LLM Tokens: 27874
+  - VLM Tokens: 0
+  - Total Tokens: 27874
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2504 0201 - MEOH.pdf
+  - LLM Tokens: 23881
+  - VLM Tokens: 0
+  - Total Tokens: 23881
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+End Time: 2025-09-04 12:57:57
+Output Excel: Cargo_BL_20250904_125757.xlsx
+Output Log: Cargo_BL_20250904_125757_log.txt

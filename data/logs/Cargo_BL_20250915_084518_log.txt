@@ -1,0 +1,38 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-09-15 08:42:59
+Analysis Type: Cargo_BL
+Language: en
+File Count: 1
+Custom Prompt: No
+
+File Preparation: Draft B.L. M.T. Floyen V-2505.pdf (6552352 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: Draft B.L. M.T. Floyen V-2505.pdf
+  - Pages: 34
+  - Extracted Text Length: 164579 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: Draft B.L. M.T. Floyen V-2505.pdf
+  - Tokens Used: 56159
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+
+=== Processing Summary ===
+Total Processing Time: 139.5 seconds
+Total Tokens Used: 56159
+Total Pages: 34
+Successfully Processed Files: 1
+
+=== Detailed File Processing Statistics ===
+File: Draft B.L. M.T. Floyen V-2505.pdf
+  - LLM Tokens: 56159
+  - VLM Tokens: 0
+  - Total Tokens: 56159
+  - Successfully Extracted Fields: 2
+  - Missing Fields: 0
+
+End Time: 2025-09-15 08:45:18
+Output Excel: Cargo_BL_20250915_084518.xlsx
+Output Log: Cargo_BL_20250915_084518_log.txt

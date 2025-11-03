@@ -1,0 +1,30 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-10-08 22:40:45
+Analysis Type: Cargo_BL
+Language: en
+File Count: 1
+Custom Prompt: No
+
+File Preparation: LBG-PAR-05.pdf (588666 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: LBG-PAR-05.pdf
+  - Pages: 5
+  - Extracted Text Length: 22836 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: LBG-PAR-05.pdf
+  - Tokens Used: 12594
+  - Analysis Result: Success
+[OK] Split=1999.858, B/L=1999.858
+[OK] Split=1999.858, B/L=1999.858
+[OK] Split=1999.858, B/L=1999.858
+[OK] Split=1999.858, B/L=1999.858
+SID [OK] Split qty valid for BL=LBG/PAR-05 | Split=1999.858 | B/L=1999.858
+SID [OK] Split qty valid for BL=LBG/PAR-05 | Split=1999.858 | B/L=1999.858
+SID [OK] Split qty valid for BL=LBG/PAR-05 | Split=1999.858 | B/L=1999.858
+SID [OK] Split qty valid for BL=LBG/PAR-05 | Split=1999.858 | B/L=1999.858
+End Time: 2025-10-08 22:42:12
+Output Excel: Cargo_BL_20251008_224212.xlsx
+Output Log: Cargo_BL_20251008_224212_log.txt

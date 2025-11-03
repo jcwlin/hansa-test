@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - BakuDocs Smart Document Analysis System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="login-container">
+  <!-- Language selector removed -->
+  
+  <div class="login-card">
+    <div class="login-header">
+      <div class="login-logo">
+        <img src="{{ url_for('static', filename='panda_logo.png') }}" alt="BakuDocs Logo" class="logo-image">
+      </div>
+      <h2 style="margin: 0; color: var(--text-primary); font-weight: 700;">BakuDocs</h2>
+      <p style="margin: 0.5rem 0 0; color: var(--text-secondary);">Smart Document Analysis System</p>
+    </div>
+    
+    {% if error %}
+    <div class="alert alert-danger">
+      <i class="fas fa-exclamation-triangle"></i>
+      {{ error }}
+    </div>
+    {% endif %}
+    
+    <form method="post">
+      <div class="form-group">
+        <label class="form-label">
+          <i class="fas fa-user"></i>
+          Username
+        </label>
+        <input type="text" class="form-input" name="username" required 
+               placeholder="Please enter your username">
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">
+          <i class="fas fa-lock"></i>
+          Password
+        </label>
+        <input type="password" class="form-input" name="password" required 
+               placeholder="Please enter your password">
+      </div>
+      
+      <button type="submit" class="btn btn-primary btn-lg w-100">
+        <i class="fas fa-sign-in-alt"></i>
+        Login
+      </button>
+    </form>
+    <!--
+    <div style="margin-top: 2rem; text-align: center; color: var(--text-secondary); font-size: 0.875rem;">
+      <p>Default Admin Account: admin / admin123</p>
+    </div> 
+    -->
+  </div>
+</div>
+
+<script>
+// Language switching functionality removed
+
+// Simple login form interaction effects
+document.addEventListener('DOMContentLoaded', function() {
+  const inputs = document.querySelectorAll('.form-input');
+  
+  inputs.forEach(input => {
+    input.addEventListener('focus', function() {
+      this.parentElement.style.transform = 'translateY(-2px)';
+    });
+    
+    input.addEventListener('blur', function() {
+      this.parentElement.style.transform = 'translateY(0)';
+    });
+  });
+});
+</script>
+</body>
+</html>

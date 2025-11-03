@@ -1,0 +1,41 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-10-06 17:16:27
+Analysis Type: Cargo_BL
+Language: en
+File Count: 1
+Custom Prompt: No
+
+File Preparation: DUM-PAR-02.pdf (455510 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: DUM-PAR-02.pdf
+  - Pages: 5
+  - Extracted Text Length: 22064 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: DUM-PAR-02.pdf
+  - Tokens Used: 11243
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+
+=== Processing Summary ===
+Total Processing Time: 49.6 seconds
+Total Tokens Used: 11243
+Total Pages: 5
+Successfully Processed Files: 1
+
+=== Detailed File Processing Statistics ===
+File: DUM-PAR-02.pdf
+  - LLM Tokens: 11243
+  - VLM Tokens: 0
+  - Total Tokens: 11243
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+End Time: 2025-10-06 17:17:17
+Output Excel: Cargo_BL_20251006_171717.xlsx
+Output Log: Cargo_BL_20251006_171717_log.txt

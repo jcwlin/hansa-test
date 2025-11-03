@@ -1,0 +1,51 @@
+SID [INFO] Valid split qty for BL=FLO 2505 0101 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0102 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0103 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0104 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0105 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0106 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0107 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0108 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0109 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0110 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0111 | Split=1000.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0112 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0113 | Split=500.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLOY 2505 0114A | Split=200.0 < B/L=7200.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0114B | Split=300.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0115 | Split=250.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0116 | Split=250.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0117 | Split=1000.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0118 | Split=500.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0119 | Split=250.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0120 | Split=250.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0121 | Split=2000.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0122 | Split=1000.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0123 | Split=500.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0124 | Split=500.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0125 | Split=500.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0126 | Split=500.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0127 | Split=500.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0128 | Split=500.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0129 | Split=500.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0130 | Split=500.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0131 | Split=500.0 < B/L=10800.0 → kept.
+SID [INFO] Valid split qty for BL=FLO 2505 0132 | Split=500.0 < B/L=10800.0 → kept.
+
+=== Processing Summary ===
+Total Processing Time: 338.39 seconds
+Total Tokens Used: 71383
+Total Pages: 34
+Successfully Processed Files: 1
+
+=== Detailed File Processing Statistics ===
+File: Draft B.L. M.T. Floyen V-2505.pdf
+  - LLM Tokens: 71383
+  - VLM Tokens: 0
+  - Total Tokens: 71383
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+End Time: 2025-11-03 22:46:35
+Output Excel: Cargo_BL_20251103_224635.xlsx
+Output Log: Cargo_BL_20251103_224635_log.txt

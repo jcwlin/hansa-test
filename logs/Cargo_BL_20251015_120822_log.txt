@@ -1,0 +1,37 @@
+SID [INFO] Valid split qty for BL=ETO 2504 0101 | Split=157.334 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0102 | Split=157.334 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0103 | Split=262.223 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0104 | Split=157.334 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0105 | Split=157.334 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0106 | Split=157.334 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0107 | Split=104.889 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0108 | Split=104.889 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0109 | Split=209.779 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0110 | Split=157.334 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0111 | Split=157.334 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0112 | Split=104.889 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0113 | Split=104.889 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0114 | Split=104.889 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0115 | Split=104.889 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0116 | Split=104.889 < B/L=2307.563 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0201 | Split=1574.492 < B/L=7347.63 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0203 | Split=1312.077 < B/L=7347.63 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0202 | Split=1312.077 < B/L=7347.63 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0204 | Split=787.246 < B/L=7347.63 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0205 | Split=787.246 < B/L=7347.63 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0207 | Split=787.246 < B/L=7347.63 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0206 | Split=787.246 < B/L=7347.63 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0301 | Split=418.569 < B/L=3505.513 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0302 | Split=418.569 < B/L=3505.513 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0303 | Split=418.569 < B/L=3505.513 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0304 | Split=313.926 < B/L=3505.513 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0305 | Split=366.247 < B/L=3505.513 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0306 | Split=1151.064 < B/L=3505.513 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0307 | Split=418.569 < B/L=3505.513 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0501 | Split=525.0 < B/L=2095.77 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0502 | Split=210.0 < B/L=2095.77 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0503 | Split=993.77 < B/L=2095.77 → kept.
+SID [INFO] Valid split qty for BL=ETO 2504 0504 | Split=367.0 < B/L=2095.77 → kept.
+End Time: 2025-10-15 12:08:22
+Output Excel: Cargo_BL_20251015_120822.xlsx
+Output Log: Cargo_BL_20251015_120822_log.txt

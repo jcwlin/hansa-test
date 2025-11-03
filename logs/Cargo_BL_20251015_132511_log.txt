@@ -1,0 +1,5 @@
+SID [INFO] Valid split qty for BL=BTR 2501 0101 | Split=9015.992 < B/L=17015.992 → kept.
+SID [INFO] Valid split qty for BL=BTR 2501 0102 | Split=8000.0 < B/L=17015.992 → kept.
+End Time: 2025-10-15 13:25:11
+Output Excel: Cargo_BL_20251015_132511.xlsx
+Output Log: Cargo_BL_20251015_132511_log.txt

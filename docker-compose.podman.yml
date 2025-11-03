@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  bakudocs:
+    build: .
+    container_name: bakudocs-app
+    ports:
+      - "5001:5001"
+    volumes:
+      # Persistent data volumes - using absolute paths for better Podman compatibility
+      - ./data/uploads:/app/uploads:Z
+      - ./data/logs:/app/logs:Z
+      - ./data/databases:/app/databases:Z
+      # Configuration files
+      - ./config.yaml:/app/config.yaml:Z
+      - ./fileanalyzer-463911-e71c7f7288ad.json:/app/fileanalyzer-463911-e71c7f7288ad.json:Z
+    environment:
+      - FLASK_ENV=production
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/fileanalyzer-463911-e71c7f7288ad.json
+      - PYTHONPATH=/app
+      # Podman-specific optimizations
+      - PODMAN_USERNS=keep-id
+    restart: unless-stopped
+    # Podman-compatible healthcheck
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:5001/login', timeout=10)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Podman-specific labels
+    labels:
+      - "io.podman.autoupdate=registry"
+      - "org.opencontainers.image.description=BakuDocs Smart Document Analysis System"
+
+volumes:
+  uploads_data:
+  logs_data:
+  databases_data:

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BakuDocs Smart Document Analysis System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="app-container">
+  <div class="main-card">
+    <!-- 頁首 -->
+    <div class="app-header">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='panda_logo.png') }}" alt="BakuDocs Logo" class="logo-image">
+      </div>
+      <h1>BakuDocs</h1>
+      <p class="subtitle">Smart Document Analysis</p>
+    </div>
+
+    <!-- 用戶訊息欄 -->
+    <div class="user-info-bar">
+      <div class="user-welcome">
+        <i class="fas fa-user-circle"></i>
+        Welcome, <strong>{{ session.username }}</strong>
+      </div>
+      <div class="user-actions">
+        <!-- Language selector removed -->
+        
+        {% if session.is_admin %}
+        <a href="/admin" class="btn btn-secondary btn-sm">
+          <i class="fas fa-cogs"></i>
+          Admin Dashboard
+        </a>
+        {% endif %}
+        <a href="/history" class="btn btn-outline btn-sm">
+          <i class="fas fa-history"></i>
+          View History
+        </a>
+        <a href="/logout" class="btn btn-danger btn-sm">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </a>
+      </div>
+    </div>
+
+    <!-- 主要內容 -->
+    <div class="main-content">
+      <div class="section-title">
+        <i class="fas fa-upload"></i>
+        Smart Document Analysis
+      </div>
+
+      <form id="uploadForm" method="post" enctype="multipart/form-data">
+        <!-- 檔案分類選擇 -->
+        <div class="form-group">
+          <label class="form-label">
+            <i class="fas fa-tag"></i>
+            Select Analyzer
+          </label>
+          <select id="fileCategory" class="form-select" name="analysis_type" required>
+            <option value="">Select Analyzer</option>
+            {% for analyzer in allowed_analyzers %}
+              <option value="{{ analyzer }}">{{ analyzer }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+
+
+        <!-- 檔案上傳區域 -->
+        <div class="form-group">
+          <label class="form-label">
+            <i class="fas fa-file-upload"></i>
+            Upload Files
+          </label>
+          <div class="file-upload-area" id="fileUploadArea">
+            <div class="upload-icon">
+              <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <div class="upload-text">Drag files here or click to select</div>
+            <div class="upload-hint">Supports PDF, Excel, Word and other formats</div>
+            <input type="file" id="fileInput" name="files" multiple accept=".pdf,.xlsx,.xls,.docx,.doc,.png,.jpg,.jpeg" style="display: none;">
+          </div>
+          <div id="fileList" class="mt-2"></div>
+        </div>
+
+        <!-- 自訂提示 -->
+        <div class="form-group">
+          <label class="form-label">
+            <i class="fas fa-edit"></i>
+            Custom Analysis Prompt (Optional)
+          </label>
+          <textarea class="form-textarea" name="custom_prompt" 
+                    placeholder="Enter special analysis requirements or focus points..."></textarea>
+        </div>
+
+        <!-- 分析選項 -->
+        <div class="form-group">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <input type="checkbox" id="keepFilename" name="keep_filename">
+            <label for="keepFilename" class="form-label" style="margin: 0;">Keep Original Filename</label>
+          </div>
+        </div>
+
+        <!-- 提交按鈕 -->
+        <div style="text-align: center; margin-top: 2rem;">
+          <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+            <i class="fas fa-brain"></i>
+            Start Analysis
+          </button>
+        </div>
+      </form>
+
+      <!-- 分析進度區域 -->
+      <div id="progressArea" class="progress-container" style="display: none;">
+        <div id="progressText">Loading...</div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressBar" style="width: 0%;"></div>
+        </div>
+        <div id="analyzing-label">Processing...</div>
+      </div>
+
+      <!-- 結果區域 -->
+      <div id="resultArea" style="display: none;">
+        <div class="section-title" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <div style="text-align: left; flex: 1;">
+            <i class="fas fa-chart-bar"></i>
+            Analysis Result
+          </div>
+          <button id="export-btn" class="btn btn-success" style="display: none;">
+            <i class="fas fa-download"></i>
+            Download Excel
+          </button>
+        </div>
+        
+        <div style="overflow-x: auto;">
+          <table id="result-table" class="data-table" style="font-size: 0.8rem;"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// 全局變數
+let taskId = null;
+
+// 檔案上傳邏輯
+document.addEventListener('DOMContentLoaded', function() {
+  const fileUploadArea = document.getElementById('fileUploadArea');
+  const fileInput = document.getElementById('fileInput');
+  const fileList = document.getElementById('fileList');
+  const form = document.getElementById('uploadForm');
+
+  // 拖放功能
+  ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    fileUploadArea.addEventListener(eventName, preventDefaults, false);
+    document.body.addEventListener(eventName, preventDefaults, false);
+  });
+
+  ['dragenter', 'dragover'].forEach(eventName => {
+    fileUploadArea.addEventListener(eventName, highlight, false);
+  });
+
+  ['dragleave', 'drop'].forEach(eventName => {
+    fileUploadArea.addEventListener(eventName, unhighlight, false);
+  });
+
+  fileUploadArea.addEventListener('drop', handleDrop, false);
+  fileUploadArea.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', handleFiles);
+
+  function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  function highlight(e) {
+    fileUploadArea.classList.add('dragover');
+  }
+
+  function unhighlight(e) {
+    fileUploadArea.classList.remove('dragover');
+  }
+
+  function handleDrop(e) {
+    const dt = e.dataTransfer;
+    const files = dt.files;
+    fileInput.files = files;
+    handleFiles();
+  }
+
+  function handleFiles() {
+    const files = fileInput.files;
+    displayFileList(files);
+  }
+
+  function displayFileList(files) {
+    fileList.innerHTML = '';
+    if (files.length > 0) {
+      const listEl = document.createElement('div');
+      listEl.style.marginTop = '1rem';
+      
+      Array.from(files).forEach((file, index) => {
+        const fileItem = document.createElement('div');
+        fileItem.style.cssText = `
+          display: flex; 
+          justify-content: space-between; 
+          align-items: center; 
+          padding: 0.75rem; 
+          background: var(--light-bg); 
+          border-radius: var(--radius-sm); 
+          margin-bottom: 0.5rem;
+          border-left: 3px solid var(--primary-color);
+        `;
+        
+        fileItem.innerHTML = `
+          <div>
+            <i class="fas fa-file" style="margin-right: 0.5rem; color: var(--primary-color);"></i>
+            <strong>${file.name}</strong>
+            <span style="color: var(--text-secondary); margin-left: 0.5rem;">
+              (${(file.size / 1024 / 1024).toFixed(2)} MB)
+            </span>
+          </div>
+          <button type="button" onclick="removeFile(${index})" 
+                  style="background: var(--danger-color); color: white; border: none; 
+                         border-radius: 50%; width: 24px; height: 24px; 
+                         display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <i class="fas fa-times" style="font-size: 0.75rem;"></i>
+          </button>
+        `;
+        
+        listEl.appendChild(fileItem);
+      });
+      
+      fileList.appendChild(listEl);
+    }
+  }
+
+  // 表單提交
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    if (!fileInput.files.length) {
+      alert('請選擇要分析的檔案');
+      return;
+    }
+    
+    if (!document.getElementById('fileCategory').value) {
+      alert('請選擇檔案分類');
+      return;
+    }
+
+    startAnalysis();
+  });
+});
+
+// 移除檔案函數
+function removeFile(index) {
+  const fileInput = document.getElementById('fileInput');
+  const dt = new DataTransfer();
+  
+  Array.from(fileInput.files).forEach((file, i) => {
+    if (i !== index) dt.items.add(file);
+  });
+  
+  fileInput.files = dt.files;
+  displayFileList(fileInput.files);
+}
+
+// 重新顯示檔案列表（移除檔案後使用）
+function displayFileList(files) {
+  const fileList = document.getElementById('fileList');
+  fileList.innerHTML = '';
+  
+  if (files.length > 0) {
+    const listEl = document.createElement('div');
+    listEl.style.marginTop = '1rem';
+    
+    Array.from(files).forEach((file, index) => {
+      const fileItem = document.createElement('div');
+      fileItem.style.cssText = `
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 0.75rem; 
+        background: var(--light-bg); 
+        border-radius: var(--radius-sm); 
+        margin-bottom: 0.5rem;
+        border-left: 3px solid var(--primary-color);
+      `;
+      
+      fileItem.innerHTML = `
+        <div>
+          <i class="fas fa-file" style="margin-right: 0.5rem; color: var(--primary-color);"></i>
+          <strong>${file.name}</strong>
+          <span style="color: var(--text-secondary); margin-left: 0.5rem;">
+            (${(file.size / 1024 / 1024).toFixed(2)} MB)
+          </span>
+        </div>
+        <button type="button" onclick="removeFile(${index})" 
+                style="background: var(--danger-color); color: white; border: none; 
+                       border-radius: 50%; width: 24px; height: 24px; 
+                       display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <i class="fas fa-times" style="font-size: 0.75rem;"></i>
+        </button>
+      `;
+      
+      listEl.appendChild(fileItem);
+    });
+    
+    fileList.appendChild(listEl);
+  }
+}
+
+// 開始分析
+function startAnalysis() {
+  const formData = new FormData(document.getElementById('uploadForm'));
+  
+  // 重置分析開始時間
+  analysisStartTime = null;
+  
+  // 顯示進度區域
+  document.getElementById('progressArea').style.display = 'block';
+  document.getElementById('resultArea').style.display = 'none';
+  document.getElementById('submitBtn').disabled = true;
+  
+  // 滾動到進度區域
+  document.getElementById('progressArea').scrollIntoView({ behavior: 'smooth' });
+
+  fetch('/analyze', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      taskId = data.task_id;
+      pollProgress();
+    } else {
+      throw new Error(data.message || '分析啟動失敗');
+    }
+  })
+  .catch(error => {
+    alert('分析失敗: ' + error.message);
+    resetUI();
+  });
+}
+
+// 開始時間記錄
+let analysisStartTime = null;
+
+// 輪詢進度
+function pollProgress() {
+  if (!taskId) return;
+  
+  if (!analysisStartTime) {
+    analysisStartTime = Date.now();
+  }
+  
+  fetch(`/progress/${taskId}`)
+  .then(response => response.json())
+  .then(data => {
+    // 重置錯誤計時器，因為成功獲取了進度
+    window.indexProgressErrorStartTime = null;
+    
+    // 計算經過時間
+    const elapsedSeconds = Math.floor((Date.now() - analysisStartTime) / 1000);
+    const progressPercentage = data.percentage || (data.current && data.total ? (data.current / data.total * 100) : 0);
+    
+    updateProgress(progressPercentage, data.message, elapsedSeconds, data.current, data.total);
+    
+    // 僅在最終結果出現時結束輪詢
+    if (data.success !== undefined) {
+      if (data.success) {
+        displayResults(data);
+      } else {
+        // 分析失敗，停止輪詢並顯示錯誤（僅顯示明確錯誤，避免把進度訊息當成錯誤）
+        const explicitError = data.error || '分析完成但發生錯誤';
+        console.error('Analysis failed:', explicitError);
+        alert('分析失敗: ' + explicitError);
+        resetUI();
+      }
+      return; // 停止輪詢
+    }
+
+    // 進度達到 100% 但尚未回傳最終結果 → 顯示收尾中並繼續輪詢
+    if (progressPercentage >= 100) {
+      updateProgress(100, '收尾中...', elapsedSeconds, data.current, data.total);
+      setTimeout(pollProgress, 1000);
+      return;
+    }
+
+    // 繼續輪詢
+    setTimeout(pollProgress, 1000);
+  })
+  .catch(error => {
+    console.error('Progress tracking error:', error);
+    // 更友好的錯誤處理，不立即中止進度追蹤
+    const currentTime = Date.now();
+    if (!window.indexProgressErrorStartTime) {
+      window.indexProgressErrorStartTime = currentTime;
+    } else if (currentTime - window.indexProgressErrorStartTime > 30000) {
+      // 30秒後才顯示錯誤並停止
+      alert('獲取進度失敗: ' + error.message);
+      resetUI();
+      return;
+    }
+    // 繼續輪詢，但顯示錯誤狀態
+    setTimeout(pollProgress, 2000); // 增加間隔到2秒
+  });
+}
+
+// 更新進度顯示
+function updateProgress(progress, message, elapsedSeconds, current, total) {
+  const progressBar = document.getElementById('progressBar');
+  const progressText = document.getElementById('progressText');
+  const analyzingLabel = document.getElementById('analyzing-label');
+  
+  // 更新進度條
+  progressBar.style.width = Math.min(progress, 100) + '%';
+  
+  // 格式化時間
+  const minutes = Math.floor(elapsedSeconds / 60);
+  const seconds = elapsedSeconds % 60;
+  const timeStr = minutes > 0 ? `${minutes}:${seconds.toString().padStart(2, '0')}` : `${seconds}s`;
+  
+  // 更新進度文字
+  if (current && total) {
+    progressText.textContent = `${message || '處理中'} (${current}/${total}) - ${Math.round(progress)}%`;
+  } else {
+    progressText.textContent = (message || '處理中...') + ` - ${Math.round(progress)}%`;
+  }
+  
+  // 更新時間顯示 - 支援雙語
+  if (analyzingLabel) {
+    if (message && message.includes('中')) {
+      // 包含中文，使用中文介面
+      analyzingLabel.textContent = `分析中，請稍候... ${timeStr}`;
+    } else {
+      // 預設英文介面
+      analyzingLabel.textContent = `Analyzing, please wait... ${timeStr}`;
+    }
+  }
+}
+
+// 顯示結果
+function displayResults(result) {
+  const resultArea = document.getElementById('resultArea');
+  const resultTable = document.getElementById('result-table');
+  const exportBtn = document.getElementById('export-btn');
+  
+  // 構建表格
+  let tableHTML = '<thead><tr>';
+  result.headers.forEach((header, index) => {
+    // 為最後一欄添加特殊樣式
+    const isLastColumn = index === result.headers.length - 1;
+    const style = isLastColumn ? 'style="white-space: nowrap; min-width: 80px;"' : '';
+    tableHTML += `<th contenteditable="true" ${style}>${header}</th>`;
+  });
+  tableHTML += '</tr></thead><tbody>';
+  
+  const rows = result.rows || result.data || [];
+  rows.forEach(row => {
+    tableHTML += '<tr>';
+    row.forEach((cell, index) => {
+      // 為最後一欄添加特殊樣式
+      const isLastColumn = index === row.length - 1;
+      const style = isLastColumn ? 'style="white-space: nowrap; font-size: 0.75rem;"' : 'style="font-size: 0.8rem;"';
+      tableHTML += `<td ${style}>${cell || ''}</td>`;
+    });
+    tableHTML += '</tr>';
+  });
+  tableHTML += '</tbody>';
+  
+  resultTable.innerHTML = tableHTML;
+  
+  // 設定下載按鈕
+  const excelFile = result.excel || result.excel_file;
+  if (excelFile) {
+    exportBtn.style.display = 'inline-flex';
+    exportBtn.onclick = () => {
+      window.location.href = `/export/${excelFile}`;
+    };
+  }
+  
+  // 顯示結果區域
+  resultArea.style.display = 'block';
+  document.getElementById('progressArea').style.display = 'none';
+  
+  resetUI();
+  
+  // 滾動到結果區域
+  resultArea.scrollIntoView({ behavior: 'smooth' });
+}
+
+// 重置UI狀態
+function resetUI() {
+  document.getElementById('submitBtn').disabled = false;
+  taskId = null;
+  analysisStartTime = null;
+}
+
+// 語言切換功能
+function toggleLanguageMenu() {
+  const menu = document.getElementById('languageMenu');
+  menu.classList.toggle('show');
+}
+
+// 點擊其他地方關閉語言選單
+document.addEventListener('click', function(event) {
+  const selector = document.querySelector('.language-selector');
+  const menu = document.getElementById('languageMenu');
+  
+  if (selector && menu && !selector.contains(event.target)) {
+    menu.classList.remove('show');
+  }
+});
+</script>
+</body>
+</html>

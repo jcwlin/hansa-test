@@ -1,0 +1,3 @@
+End Time: 2025-10-14 21:50:24
+Output Excel: Cargo_BL_20251014_215024.xlsx
+Output Log: Cargo_BL_20251014_215024_log.txt

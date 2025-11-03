@@ -1,0 +1,195 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-09-04 13:26:43
+Analysis Type: Cargo_BL
+Language: en
+File Count: 10
+Custom Prompt: No
+
+File Preparation: ETO 2506 0101 - PFAD - GELA.pdf (411850 bytes)
+File Preparation: ETO 2506 0102 - PFAD - GELA.pdf (352337 bytes)
+File Preparation: ETO 2506 0201 - POME - GELA.pdf (145370 bytes)
+File Preparation: ETO 2506 0202 - POME - GELA.pdf (142120 bytes)
+File Preparation: ETO 2506 0203 - POME - GELA.pdf (143452 bytes)
+File Preparation: ETO 2506 0204 - POME - GELA.pdf (145990 bytes)
+File Preparation: ETO 2506 0301 - RPOME - VENICE.pdf (142035 bytes)
+File Preparation: ETO 2506 0302 - RPOME - VENICE.pdf (144108 bytes)
+File Preparation: ETO 2506 0303 - RPOME - VENICE.pdf (147227 bytes)
+File Preparation: Mombasa BLS.pdf (1578458 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: ETO 2506 0101 - PFAD - GELA.pdf
+  - Pages: 1
+  - Extracted Text Length: 4056 characters
+  - Status: Success
+OCR Extraction: ETO 2506 0102 - PFAD - GELA.pdf
+  - Pages: 1
+  - Extracted Text Length: 4498 characters
+  - Status: Success
+OCR Extraction: ETO 2506 0201 - POME - GELA.pdf
+  - Pages: 1
+  - Extracted Text Length: 4597 characters
+  - Status: Success
+OCR Extraction: ETO 2506 0202 - POME - GELA.pdf
+  - Pages: 1
+  - Extracted Text Length: 4589 characters
+  - Status: Success
+OCR Extraction: ETO 2506 0203 - POME - GELA.pdf
+  - Pages: 1
+  - Extracted Text Length: 4571 characters
+  - Status: Success
+OCR Extraction: ETO 2506 0204 - POME - GELA.pdf
+  - Pages: 1
+  - Extracted Text Length: 4607 characters
+  - Status: Success
+OCR Extraction: ETO 2506 0301 - RPOME - VENICE.pdf
+  - Pages: 1
+  - Extracted Text Length: 4462 characters
+  - Status: Success
+OCR Extraction: ETO 2506 0302 - RPOME - VENICE.pdf
+  - Pages: 1
+  - Extracted Text Length: 4641 characters
+  - Status: Success
+OCR Extraction: ETO 2506 0303 - RPOME - VENICE.pdf
+  - Pages: 1
+  - Extracted Text Length: 4366 characters
+  - Status: Success
+OCR Extraction: Mombasa BLS.pdf
+  - Pages: 4
+  - Extracted Text Length: 12458 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: ETO 2506 0101 - PFAD - GELA.pdf
+  - Tokens Used: 5788
+  - Analysis Result: Success
+  - VLM Remediated Fields: 3 fields
+  - VLM Tokens 使用: 2781
+    * B/L split quantity (MT)=3,999.974
+    * Notify=ENILIVE - RAFFINERIA DI GELA
+    * OBL release date=2025-07-24
+LLM Analysis: ETO 2506 0102 - PFAD - GELA.pdf
+  - Tokens Used: 6479
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2506 0201 - POME - GELA.pdf
+  - Tokens Used: 6198
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2506 0202 - POME - GELA.pdf
+  - Tokens Used: 6141
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2506 0203 - POME - GELA.pdf
+  - Tokens Used: 5637
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2506 0204 - POME - GELA.pdf
+  - Tokens Used: 6052
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2506 0301 - RPOME - VENICE.pdf
+  - Tokens Used: 5950
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2506 0302 - RPOME - VENICE.pdf
+  - Tokens Used: 5701
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: ETO 2506 0303 - RPOME - VENICE.pdf
+  - Tokens Used: 7010
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: Mombasa BLS.pdf
+  - Tokens Used: 9320
+  - Analysis Result: Success
+  - VLM Remediated Fields: 2 fields
+  - VLM Tokens 使用: 4291
+    * B/L split quantity (MT)=4,703.041
+    * Charterer=文件中未提供此資訊。
+  - VLM Remediated Fields: 2 fields
+  - VLM Tokens 使用: 4298
+    * B/L split quantity (MT)=4,703.041
+    * Charterer=文件中沒有「Charterer」這個欄位。
+
+=== Processing Summary ===
+Total Processing Time: 168.64 seconds
+Total Tokens Used: 75646
+Total Pages: 13
+Successfully Processed Files: 10
+
+=== Detailed File Processing Statistics ===
+File: ETO 2506 0101 - PFAD - GELA.pdf
+  - LLM Tokens: 5788
+  - VLM Tokens: 2781
+  - Total Tokens: 8569
+  - Successfully Extracted Fields: 10
+  - Missing Fields: 3
+  - VLM Remediated Fields: B/L split quantity (MT), Notify, OBL release date
+
+File: ETO 2506 0102 - PFAD - GELA.pdf
+  - LLM Tokens: 6479
+  - VLM Tokens: 0
+  - Total Tokens: 6479
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2506 0201 - POME - GELA.pdf
+  - LLM Tokens: 6198
+  - VLM Tokens: 0
+  - Total Tokens: 6198
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2506 0202 - POME - GELA.pdf
+  - LLM Tokens: 6141
+  - VLM Tokens: 0
+  - Total Tokens: 6141
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2506 0203 - POME - GELA.pdf
+  - LLM Tokens: 5637
+  - VLM Tokens: 0
+  - Total Tokens: 5637
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2506 0204 - POME - GELA.pdf
+  - LLM Tokens: 6052
+  - VLM Tokens: 0
+  - Total Tokens: 6052
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2506 0301 - RPOME - VENICE.pdf
+  - LLM Tokens: 5950
+  - VLM Tokens: 0
+  - Total Tokens: 5950
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2506 0302 - RPOME - VENICE.pdf
+  - LLM Tokens: 5701
+  - VLM Tokens: 0
+  - Total Tokens: 5701
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: ETO 2506 0303 - RPOME - VENICE.pdf
+  - LLM Tokens: 7010
+  - VLM Tokens: 0
+  - Total Tokens: 7010
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 0
+
+File: Mombasa BLS.pdf
+  - LLM Tokens: 9320
+  - VLM Tokens: 4298
+  - Total Tokens: 13618
+  - Successfully Extracted Fields: 11
+  - Missing Fields: 2
+  - VLM Remediated Fields: B/L split quantity (MT), Charterer
+
+End Time: 2025-09-04 13:29:32
+Output Excel: Cargo_BL_20250904_132932.xlsx
+Output Log: Cargo_BL_20250904_132932_log.txt

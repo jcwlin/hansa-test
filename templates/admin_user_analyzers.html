@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyzer Settings - {{ user.username }} - BakuDocs Smart Document Analysis System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="app-container">
+  <div class="main-card">
+    <!-- 頁首 -->
+    <div class="app-header">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='panda_logo.png') }}" alt="BakuDocs Logo" class="logo-image">
+      </div>
+      <h1>Analyzer Settings</h1>
+      <p class="subtitle">User: {{ user.username }}</p>
+    </div>
+
+    <!-- 用戶訊息欄 -->
+    <div class="user-info-bar">
+      <div class="user-welcome">
+        <i class="fas fa-cog"></i>
+        Configure User: <strong>{{ user.username }}</strong> Analyzer Permissions
+      </div>
+      <div class="user-actions">
+        <a href="/admin" class="btn btn-secondary btn-sm">
+          <i class="fas fa-arrow-left"></i>
+          Back to Admin
+        </a>
+        <a href="/logout" class="btn btn-danger btn-sm">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </a>
+      </div>
+    </div>
+
+    <!-- 主要內容 -->
+    <div class="main-content">
+      <form method="post">
+        <div class="card">
+          <div class="card-header">
+            <i class="fas fa-list-check"></i>
+            Analyzer Permissions and Settings
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <table class="data-table" style="margin: 0;">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">Analyzer Used</th>
+                  <th style="width: 8%;">Active</th>
+                  <th style="width: 15%;">VLM Service</th>
+                  <th style="width: 20%;">Ollama Model</th>
+                  <th style="width: 15%;">OCR Language</th>
+                  <th style="width: 12%;">Save Files</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for analyzer in analyzers %}
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                      <i class="fas fa-brain" style="color: var(--primary-color);"></i>
+                      <div>
+                        <div style="font-weight: 600;">{{ analyzer }}</div>
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">
+                          Smart Analyzer
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div style="display: flex; align-items: center;">
+                      <input type="checkbox" name="enabled_{{analyzer}}" 
+                             {% if settings.get(analyzer, {}).get('enabled') %}checked{% endif %}
+                             style="width: 1.25rem; height: 1.25rem; accent-color: var(--primary-color);">
+                    </div>
+                  </td>
+                  <td>
+                    <select class="form-select provider-select" name="provider_{{analyzer}}" 
+                            data-analyzer="{{analyzer}}" style="font-size: 0.875rem;">
+                      <option value="cloud" {% if settings.get(analyzer, {}).get('vlm_provider')!='local' %}selected{% endif %}>
+                        <i class="fas fa-cloud"></i> Cloud Gemini
+                      </option>
+                      <option value="local" {% if settings.get(analyzer, {}).get('vlm_provider')=='local' %}selected{% endif %}>
+                        <i class="fas fa-desktop"></i> Local Ollama
+                      </option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-select model-select" name="model_{{analyzer}}" 
+                            data-analyzer="{{analyzer}}" style="font-size: 0.875rem;">
+                      <option value="">-- Select Model --</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-select" name="ocr_lang_{{analyzer}}" style="font-size: 0.875rem;">
+                      <option value="auto" {% if settings.get(analyzer, {}).get('ocr_lang')=='auto' %}selected{% endif %}>Auto Detect</option>
+                      <option value="zh" {% if settings.get(analyzer, {}).get('ocr_lang')=='zh' or (not settings.get(analyzer, {}).get('ocr_lang') and settings.get(analyzer, {}).get('ocr_lang') != 'auto') %}selected{% endif %}>Chinese</option>
+                      <option value="en" {% if settings.get(analyzer, {}).get('ocr_lang')=='en' %}selected{% endif %}>English</option>
+                      <option value="ja" {% if settings.get(analyzer, {}).get('ocr_lang')=='ja' %}selected{% endif %}>日本語</option>
+                      <option value="ko" {% if settings.get(analyzer, {}).get('ocr_lang')=='ko' %}selected{% endif %}>한국어</option>
+                    </select>
+                  </td>
+                  <td>
+                    <div style="display: flex; align-items: center;">
+                      <input type="checkbox" name="save_files_{{analyzer}}" 
+                             {% if settings.get(analyzer, {}).get('save_files') %}checked{% endif %}
+                             style="width: 1.25rem; height: 1.25rem; accent-color: var(--success-color);">
+                      <div style="margin-left: 0.5rem; font-size: 0.75rem; color: var(--text-secondary);">
+                        Yes/No
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 操作按鈕 -->
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+          <button type="submit" class="btn btn-primary btn-lg">
+            <i class="fas fa-save"></i>
+            Save Settings
+          </button>
+          <button type="button" id="refresh-models" class="btn btn-outline btn-lg">
+            <i class="fas fa-sync-alt"></i>
+            Refresh Model List
+          </button>
+        </div>
+      </form>
+
+      <!-- 說明資訊 -->
+      <div style="margin-top: 3rem;">
+        <div class="card">
+          <div class="card-header">
+            <i class="fas fa-info-circle"></i>
+            Settings Guide
+          </div>
+          <div class="card-body">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+              <div>
+                <h4 style="color: var(--primary-color); margin-bottom: 0.75rem;">
+                  <i class="fas fa-toggle-on"></i>
+                  Enable/Disable
+                </h4>
+                <p style="margin: 0; color: var(--text-secondary);">
+                  Control whether users can use specific analyzers. Disabled analyzers will not appear in the user interface.
+                </p>
+              </div>
+              
+              <div>
+                <h4 style="color: var(--success-color); margin-bottom: 0.75rem;">
+                  <i class="fas fa-cloud"></i>
+                  VLM Service
+                </h4>
+                <p style="margin: 0; color: var(--text-secondary);">
+                  <strong>Cloud:</strong> Use Google Gemini API (requires internet connection)<br>
+                  <strong>Local:</strong> Use local Ollama service (private deployment)
+                </p>
+              </div>
+              
+              <div>
+                <h4 style="color: var(--warning-color); margin-bottom: 0.75rem;">
+                  <i class="fas fa-robot"></i>
+                  Ollama Models
+                </h4>
+                <p style="margin: 0; color: var(--text-secondary);">
+                  Recommended models:<br>
+                  • <code>llava:latest</code> - General visual Q&A<br>
+                  • <code>llama3.2-vision</code> - Advanced visual understanding
+                </p>
+              </div>
+              
+              <div>
+                <h4 style="color: var(--danger-color); margin-bottom: 0.75rem;">
+                  <i class="fas fa-language"></i>
+                  OCR Language
+                </h4>
+                <p style="margin: 0; color: var(--text-secondary);">
+                  Set the primary language for document OCR recognition:<br>
+                  • <strong>Auto Detect</strong> - Automatically identify document language<br>
+                  • <strong>Chinese</strong> - Chinese documents<br>
+                  • <strong>English</strong> - English documents<br>
+                  • <strong>日本語</strong> - Japanese documents<br>
+                  • <strong>한국어</strong> - Korean documents
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const analyzerSettings = {{ settings | tojson }};
+
+async function loadOllamaModels() {
+  // 顯示載入狀態
+  const refreshBtn = document.getElementById('refresh-models');
+  const originalText = refreshBtn.innerHTML;
+  refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 載入中...';
+  refreshBtn.disabled = true;
+
+  try {
+    const res = await fetch('/admin/ollama/models');
+    const data = await res.json();
+    
+    document.querySelectorAll('.model-select').forEach(select => {
+      const analyzer = select.dataset.analyzer;
+      const currentValue = analyzerSettings[analyzer]?.ollama_model || '';
+      
+      // 清空選項
+      select.innerHTML = '<option value="">-- 選擇模型 --</option>';
+      
+      if (data.success && Array.isArray(data.models)) {
+        data.models.forEach(m => {
+          const opt = document.createElement('option');
+          opt.value = m;
+          opt.textContent = m;
+          if (m === currentValue) opt.selected = true;
+          select.appendChild(opt);
+        });
+        
+        // 如果沒有模型，顯示提示
+        if (data.models.length === 0) {
+          const opt = document.createElement('option');
+          opt.value = '';
+          opt.textContent = 'No models available (please install Ollama models first)';
+          opt.disabled = true;
+          select.appendChild(opt);
+        }
+      } else {
+        // 錯誤情況
+        const opt = document.createElement('option');
+        opt.value = '';
+        opt.textContent = '無法連接到 Ollama 服務';
+        opt.disabled = true;
+        select.appendChild(opt);
+      }
+    });
+    
+    // 成功提示
+    showNotification('Model list updated', 'success');
+    
+  } catch (e) {
+    console.error('loadOllamaModels error', e);
+    
+    // 錯誤處理
+          document.querySelectorAll('.model-select').forEach(select => {
+        select.innerHTML = '<option value="">Load failed, please retry</option>';
+      });
+      
+      showNotification('Failed to load model list: ' + e.message, 'error');
+    
+  } finally {
+    // 恢復按鈕狀態
+    refreshBtn.innerHTML = originalText;
+    refreshBtn.disabled = false;
+  }
+}
+
+// 顯示通知
+function showNotification(message, type = 'info') {
+  const notification = document.createElement('div');
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    background: ${type === 'success' ? 'var(--success-color)' : type === 'error' ? 'var(--danger-color)' : 'var(--primary-color)'};
+    color: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    font-weight: 500;
+    max-width: 300px;
+  `;
+  notification.textContent = message;
+  
+  document.body.appendChild(notification);
+  
+  // 3秒後自動移除
+  setTimeout(() => {
+    notification.remove();
+  }, 3000);
+}
+
+// 事件監聽器
+document.getElementById('refresh-models').addEventListener('click', loadOllamaModels);
+
+// 頁面載入時自動載入模型清單
+document.addEventListener('DOMContentLoaded', function() {
+  loadOllamaModels();
+  
+  // 表單提交成功提示
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('saved') === '1') {
+    showNotification('Settings saved successfully', 'success');
+  }
+});
+
+// VLM 提供者切換時的邏輯處理
+document.querySelectorAll('.provider-select').forEach(select => {
+  select.addEventListener('change', function() {
+    const analyzer = this.dataset.analyzer;
+    const modelSelect = document.querySelector(`[name="model_${analyzer}"]`);
+    const modelCell = modelSelect.parentElement;
+    
+    if (this.value === 'local') {
+      // 選擇本地服務：啟用並高亮模型選擇
+      modelSelect.style.background = '#fef3c7';
+      modelSelect.disabled = false;
+      modelCell.style.opacity = '1';
+      showNotification('Selected Local service: Please select Ollama model', 'info');
+    } else {
+      // 選擇雲端服務：禁用並變灰模型選擇
+      modelSelect.style.background = '#f1f5f9';
+      modelSelect.disabled = true;
+      modelSelect.value = '';
+      modelCell.style.opacity = '0.5';
+      showNotification('Selected Cloud service: Will use Google Gemini', 'info');
+    }
+  });
+  
+  // 初始化狀態
+  const analyzer = select.dataset.analyzer;
+  const modelSelect = document.querySelector(`[name="model_${analyzer}"]`);
+  const modelCell = modelSelect.parentElement;
+  
+  if (select.value !== 'local') {
+    modelSelect.style.background = '#f1f5f9';
+    modelSelect.disabled = true;
+    modelCell.style.opacity = '0.5';
+  }
+});
+</script>
+</body>
+</html>

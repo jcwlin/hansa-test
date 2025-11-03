@@ -1,0 +1,86 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-08-22 14:18:08
+Analysis Type: Cargo_BL
+Language: en
+File Count: 3
+Custom Prompt: No
+
+File Preparation: Eva Trust 2505 - BL#5 - Ethanol 425,898mt.pdf (424933 bytes)
+File Preparation: Eva Trust 2505 - BL#6 - FAME 5997,616mt.pdf (62698 bytes)
+File Preparation: Eva Trust 2505 - BL#4 - Ethanol 154,241mt.pdf (421566 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: Eva Trust 2505 - BL#5 - Ethanol 425,898mt.pdf
+  - Pages: 2
+  - Extracted Text Length: 1953 characters
+  - Status: Success
+OCR Extraction: Eva Trust 2505 - BL#6 - FAME 5997,616mt.pdf
+  - Pages: 2
+  - Extracted Text Length: 1955 characters
+  - Status: Success
+OCR Extraction: Eva Trust 2505 - BL#4 - Ethanol 154,241mt.pdf
+  - Pages: 2
+  - Extracted Text Length: 1856 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: Eva Trust 2505 - BL#5 - Ethanol 425,898mt.pdf
+  - Tokens Used: 6578
+  - Analysis Result: Success
+  - VLM Remediated Fields: 3 fields
+  - VLM Tokens 使用: 5125
+    * B/L split quantity (MT)=425.898
+    * Charterer=TRAFIGURA PTE LTD
+    * Stow=未提供
+LLM Analysis: Eva Trust 2505 - BL#6 - FAME 5997,616mt.pdf
+  - Tokens Used: 5763
+  - Analysis Result: Success
+  - VLM Remediated Fields: 3 fields
+  - VLM Tokens 使用: 6360
+    * B/L split quantity (MT)=6,004.891
+    * Charterer=RHONE ENERGIES
+    * Stow=NONE
+LLM Analysis: Eva Trust 2505 - BL#4 - Ethanol 154,241mt.pdf
+  - Tokens Used: 5371
+  - Analysis Result: Success
+  - VLM Remediated Fields: 4 fields
+  - VLM Tokens 使用: 7788
+    * B/L split quantity (MT)=154.241
+    * Charterer=文件中未提供 Charterer 的資訊。
+    * Stow=NONE
+    * OBL release date=2025-08-17
+
+=== Processing Summary ===
+Total Processing Time: 228.23 seconds
+Total Tokens Used: 36985
+Total Pages: 6
+Successfully Processed Files: 3
+
+=== Detailed File Processing Statistics ===
+File: Eva Trust 2505 - BL#5 - Ethanol 425,898mt.pdf
+  - LLM Tokens: 6578
+  - VLM Tokens: 5125
+  - Total Tokens: 11703
+  - Successfully Extracted Fields: 10
+  - Missing Fields: 3
+  - VLM Remediated Fields: B/L split quantity (MT), Charterer, Stow
+
+File: Eva Trust 2505 - BL#6 - FAME 5997,616mt.pdf
+  - LLM Tokens: 5763
+  - VLM Tokens: 6360
+  - Total Tokens: 12123
+  - Successfully Extracted Fields: 10
+  - Missing Fields: 3
+  - VLM Remediated Fields: B/L split quantity (MT), Charterer, Stow
+
+File: Eva Trust 2505 - BL#4 - Ethanol 154,241mt.pdf
+  - LLM Tokens: 5371
+  - VLM Tokens: 7788
+  - Total Tokens: 13159
+  - Successfully Extracted Fields: 9
+  - Missing Fields: 4
+  - VLM Remediated Fields: B/L split quantity (MT), Charterer, Stow, OBL release date
+
+End Time: 2025-08-22 14:21:56
+Output Excel: Cargo_BL_20250822_142156.xlsx
+Output Log: Cargo_BL_20250822_142156_log.txt

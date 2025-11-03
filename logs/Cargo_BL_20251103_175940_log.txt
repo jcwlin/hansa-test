@@ -1,0 +1,193 @@
+SID [INFO] Valid split qty for BL=EMA 2406 0301 | Split=2000.0 < B/L=2989.045 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 0302 | Split=989.045 < B/L=2989.045 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 0701 | Split=97.608 < B/L=970.269 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 0702 | Split=290.0 < B/L=970.269 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 0703 | Split=200.0 < B/L=970.269 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 0704 | Split=382.661 < B/L=970.269 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 0801 | Split=100.0 < B/L=1007.659 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 0802 | Split=100.0 < B/L=1007.659 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 0803 | Split=600.0 < B/L=1007.659 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 0804 | Split=207.659 < B/L=1007.659 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 1001 | Split=500.0 < B/L=1904.721 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 1002 | Split=525.0 < B/L=1904.721 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 1003 | Split=500.0 < B/L=1904.721 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 1004 | Split=379.721 < B/L=1904.721 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 1201 | Split=100.0 < B/L=499.605 → kept.
+SID [INFO] Valid split qty for BL=EMA 2406 1202 | Split=399.605 < B/L=499.605 → kept.
+
+=== Processing Summary ===
+Total Processing Time: 436.39 seconds
+Total Tokens Used: 217595
+Total Pages: 37
+Successfully Processed Files: 22
+
+=== Detailed File Processing Statistics ===
+File: EMA 2406 0101.pdf
+  - LLM Tokens: 9256
+  - VLM Tokens: 1378
+  - Total Tokens: 10634
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)=None
+
+File: EMA 2406 0201.pdf
+  - LLM Tokens: 7300
+  - VLM Tokens: 1251
+  - Total Tokens: 8551
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)=None
+
+File: EMA 2406 0301.pdf
+  - LLM Tokens: 7752
+  - VLM Tokens: 1058
+  - Total Tokens: 8810
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date=2024-06-28
+
+File: EMA 2406 0302.pdf
+  - LLM Tokens: 7194
+  - VLM Tokens: 1279
+  - Total Tokens: 8473
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date=2024-06-28
+
+File: EMA 2406 0401.pdf
+  - LLM Tokens: 7965
+  - VLM Tokens: 2324
+  - Total Tokens: 10289
+  - Successfully Extracted Fields: 13
+  - Missing Fields: 2
+  - VLM Remediated Fields: B/L split quantity (MT)=None, OBL release date=2024-07-05
+
+File: EMA 2406 0501.pdf
+  - LLM Tokens: 7413
+  - VLM Tokens: 1310
+  - Total Tokens: 8723
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)=None
+
+File: EMA 2406 0601.pdf
+  - LLM Tokens: 29062
+  - VLM Tokens: 890
+  - Total Tokens: 29952
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)=None
+
+File: EMA 2406 0701.pdf
+  - LLM Tokens: 8734
+  - VLM Tokens: 0
+  - Total Tokens: 8734
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EMA 2406 0702.pdf
+  - LLM Tokens: 7058
+  - VLM Tokens: 0
+  - Total Tokens: 7058
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EMA 2406 0703.pdf
+  - LLM Tokens: 7494
+  - VLM Tokens: 860
+  - Total Tokens: 8354
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date=2024-06-28
+
+File: EMA 2406 0704.pdf
+  - LLM Tokens: 7335
+  - VLM Tokens: 997
+  - Total Tokens: 8332
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date=2024-06-28
+
+File: EMA 2406 0801.pdf
+  - LLM Tokens: 8912
+  - VLM Tokens: 0
+  - Total Tokens: 8912
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EMA 2406 0802.pdf
+  - LLM Tokens: 8788
+  - VLM Tokens: 0
+  - Total Tokens: 8788
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EMA 2406 0803.pdf
+  - LLM Tokens: 7854
+  - VLM Tokens: 0
+  - Total Tokens: 7854
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EMA 2406 0804.pdf
+  - LLM Tokens: 8314
+  - VLM Tokens: 0
+  - Total Tokens: 8314
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EMA 2406 0901.pdf
+  - LLM Tokens: 7667
+  - VLM Tokens: 1471
+  - Total Tokens: 9138
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)=None
+
+File: EMA 2406 1001.pdf
+  - LLM Tokens: 7780
+  - VLM Tokens: 0
+  - Total Tokens: 7780
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EMA 2406 1002.pdf
+  - LLM Tokens: 7208
+  - VLM Tokens: 0
+  - Total Tokens: 7208
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EMA 2406 1003.pdf
+  - LLM Tokens: 13441
+  - VLM Tokens: 0
+  - Total Tokens: 13441
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EMA 2406 1004.pdf
+  - LLM Tokens: 7684
+  - VLM Tokens: 0
+  - Total Tokens: 7684
+  - Successfully Extracted Fields: 15
+  - Missing Fields: 0
+
+File: EMA 2406 1201.pdf
+  - LLM Tokens: 10250
+  - VLM Tokens: 1001
+  - Total Tokens: 11251
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date=2024-07-08
+
+File: EMA 2406 1202.pdf
+  - LLM Tokens: 8006
+  - VLM Tokens: 1309
+  - Total Tokens: 9315
+  - Successfully Extracted Fields: 14
+  - Missing Fields: 1
+  - VLM Remediated Fields: OBL release date=2024-07-08
+
+End Time: 2025-11-03 17:59:40
+Output Excel: Cargo_BL_20251103_175940.xlsx
+Output Log: Cargo_BL_20251103_175940_log.txt

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>統計卡片布局驗證</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        body {
+            font-family: Inter, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 2rem;
+        }
+        .test-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .debug-info {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #2196f3;
+        }
+        .success {
+            background: #e8f5e8;
+            border-left-color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-card">
+        <div class="debug-info">
+            <h3>🔧 布局修復驗證</h3>
+            <p><strong>問題</strong>: 統計卡片顯示為4行垂直排列，而不是1行4列</p>
+            <p><strong>原因</strong>: 缺少Bootstrap CSS，自定義CSS沒有grid系統</p>
+            <p><strong>解決</strong>: 添加自定義的grid CSS類模擬Bootstrap行為</p>
+        </div>
+
+        <h2 style="margin-bottom: 1.5rem; color: #333;">用戶「bakuai」使用統計</h2>
+        
+        <!-- 修復後的統計卡片 -->
+        <div class="row g-3">
+            <div class="col-md-3">
+                <div class="stat-card-horizontal">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">總分析次數</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card-horizontal">
+                    <div class="stat-value">510,667</div>
+                    <div class="stat-label">總 Token 消耗</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card-horizontal">
+                    <div class="stat-value">170,222</div>
+                    <div class="stat-label">平均消耗的Tokens數</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card-horizontal">
+                    <div class="stat-value">66</div>
+                    <div class="stat-label">總處理檔案</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="debug-info success" style="margin-top: 2rem;">
+            <h4>✅ 修復要點檢查</h4>
+            <ul style="margin: 0.5rem 0;">
+                <li><strong>水平排列</strong>: 4個卡片應該在同一行</li>
+                <li><strong>等寬分佈</strong>: 每個卡片佔25%寬度</li>
+                <li><strong>Flexbox布局</strong>: 使用 <code>display: flex</code></li>
+                <li><strong>響應式</strong>: 小屏幕下自動堆疊</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1rem; background: #fafafa; border-radius: 4px;">
+            <h5>CSS修復詳情：</h5>
+            <pre style="font-size: 0.8rem; margin: 0.5rem 0;"><code>.row { display: flex; flex-wrap: wrap; }
+.col-md-3 { flex: 0 0 25%; max-width: 25%; }</code></pre>
+        </div>
+    </div>
+
+    <script>
+        // 驗證布局
+        window.addEventListener('load', function() {
+            const row = document.querySelector('.row');
+            const cols = document.querySelectorAll('.col-md-3');
+            
+            console.log('=== 布局驗證結果 ===');
+            console.log('Row display style:', window.getComputedStyle(row).display);
+            console.log('Row width:', row.offsetWidth + 'px');
+            
+            let allInSameRow = true;
+            let rowTop = cols[0].offsetTop;
+            
+            cols.forEach((col, index) => {
+                const colTop = col.offsetTop;
+                const colWidth = col.offsetWidth;
+                console.log(`Col ${index + 1}: top=${colTop}px, width=${colWidth}px`);
+                
+                if (Math.abs(colTop - rowTop) > 5) { // 允許5px誤差
+                    allInSameRow = false;
+                }
+            });
+            
+            if (allInSameRow) {
+                console.log('✅ 布局正確: 所有卡片在同一行');
+                document.querySelector('.debug-info.success').innerHTML += '<p style="margin-top: 1rem; color: #4caf50; font-weight: bold;">🎉 布局驗證成功！4個卡片正確顯示在同一行</p>';
+            } else {
+                console.log('❌ 布局錯誤: 卡片不在同一行');
+                document.querySelector('.debug-info.success').innerHTML += '<p style="margin-top: 1rem; color: #f44336; font-weight: bold;">❌ 布局仍有問題，請檢查CSS</p>';
+            }
+        });
+    </script>
+</body>
+</html>

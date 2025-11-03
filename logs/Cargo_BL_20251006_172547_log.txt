@@ -1,0 +1,535 @@
+=== File Analysis Processing Log ===
+Start Time: 2025-10-06 17:20:35
+Analysis Type: Cargo_BL
+Language: en
+File Count: 26
+Custom Prompt: No
+
+File Preparation: DUM-PAR-01.pdf (446819 bytes)
+File Preparation: DUM-PAR-02.pdf (455510 bytes)
+File Preparation: DUM-PAR-03.pdf (463161 bytes)
+File Preparation: DUM-PAR-04.pdf (459255 bytes)
+File Preparation: DUM-PAR-05.pdf (477370 bytes)
+File Preparation: DUM-PAR-06.pdf (461131 bytes)
+File Preparation: DUM-PAR-07.pdf (451270 bytes)
+File Preparation: DUM-PAR-08.pdf (480078 bytes)
+File Preparation: DUM-PAR-09.pdf (486893 bytes)
+File Preparation: DUM-PAR-10.pdf (498668 bytes)
+File Preparation: DUM-PAR-11.pdf (473492 bytes)
+File Preparation: DUM-PAR-12.pdf (455205 bytes)
+File Preparation: DUM-PAR-13.pdf (479730 bytes)
+File Preparation: DUM-PAR-14.pdf (519702 bytes)
+File Preparation: DUM-PAR-15.pdf (458158 bytes)
+File Preparation: DUM-PAR-16.pdf (499607 bytes)
+File Preparation: DUM-PAR-17.pdf (508523 bytes)
+File Preparation: EVA PEARL V2506 - COPY NNBL (DUMAI).pdf (3714803 bytes)
+File Preparation: EVA PEARL V2506 - COPY NNBL (LUBUK GAUNG).pdf (1512629 bytes)
+File Preparation: LBG-PAR-01.pdf (491058 bytes)
+File Preparation: LBG-PAR-02.pdf (551861 bytes)
+File Preparation: LBG-PAR-03.pdf (507001 bytes)
+File Preparation: LBG-PAR-04.pdf (506422 bytes)
+File Preparation: LBG-PAR-05.pdf (588666 bytes)
+File Preparation: LBG-PAR-06.pdf (481501 bytes)
+File Preparation: LBG-PAR-07.pdf (501962 bytes)
+
+=== OCR Text Extraction Phase ===
+OCR Extraction: DUM-PAR-01.pdf
+  - Pages: 5
+  - Extracted Text Length: 22072 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-02.pdf
+  - Pages: 5
+  - Extracted Text Length: 22064 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-03.pdf
+  - Pages: 5
+  - Extracted Text Length: 22545 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-04.pdf
+  - Pages: 5
+  - Extracted Text Length: 22556 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-05.pdf
+  - Pages: 5
+  - Extracted Text Length: 22319 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-06.pdf
+  - Pages: 5
+  - Extracted Text Length: 22299 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-07.pdf
+  - Pages: 5
+  - Extracted Text Length: 22329 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-08.pdf
+  - Pages: 5
+  - Extracted Text Length: 22833 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-09.pdf
+  - Pages: 5
+  - Extracted Text Length: 22065 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-10.pdf
+  - Pages: 5
+  - Extracted Text Length: 22539 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-11.pdf
+  - Pages: 5
+  - Extracted Text Length: 22026 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-12.pdf
+  - Pages: 5
+  - Extracted Text Length: 22340 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-13.pdf
+  - Pages: 5
+  - Extracted Text Length: 22519 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-14.pdf
+  - Pages: 5
+  - Extracted Text Length: 22369 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-15.pdf
+  - Pages: 5
+  - Extracted Text Length: 22007 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-16.pdf
+  - Pages: 5
+  - Extracted Text Length: 22065 characters
+  - Status: Success
+OCR Extraction: DUM-PAR-17.pdf
+  - Pages: 5
+  - Extracted Text Length: 22099 characters
+  - Status: Success
+OCR Extraction: EVA PEARL V2506 - COPY NNBL (DUMAI).pdf
+  - Pages: 17
+  - Extracted Text Length: 80146 characters
+  - Status: Success
+OCR Extraction: EVA PEARL V2506 - COPY NNBL (LUBUK GAUNG).pdf
+  - Pages: 7
+  - Extracted Text Length: 33217 characters
+  - Status: Success
+OCR Extraction: LBG-PAR-01.pdf
+  - Pages: 5
+  - Extracted Text Length: 21996 characters
+  - Status: Success
+OCR Extraction: LBG-PAR-02.pdf
+  - Pages: 5
+  - Extracted Text Length: 22524 characters
+  - Status: Success
+OCR Extraction: LBG-PAR-03.pdf
+  - Pages: 5
+  - Extracted Text Length: 22268 characters
+  - Status: Success
+OCR Extraction: LBG-PAR-04.pdf
+  - Pages: 5
+  - Extracted Text Length: 22490 characters
+  - Status: Success
+OCR Extraction: LBG-PAR-05.pdf
+  - Pages: 5
+  - Extracted Text Length: 22836 characters
+  - Status: Success
+OCR Extraction: LBG-PAR-06.pdf
+  - Pages: 5
+  - Extracted Text Length: 22093 characters
+  - Status: Success
+OCR Extraction: LBG-PAR-07.pdf
+  - Pages: 5
+  - Extracted Text Length: 22481 characters
+  - Status: Success
+
+=== LLM Analysis Phase ===
+LLM Analysis: DUM-PAR-01.pdf
+  - Tokens Used: 11436
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-02.pdf
+  - Tokens Used: 11018
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-03.pdf
+  - Tokens Used: 10940
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-04.pdf
+  - Tokens Used: 10964
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-05.pdf
+  - Tokens Used: 11013
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-06.pdf
+  - Tokens Used: 10979
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-07.pdf
+  - Tokens Used: 11010
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-08.pdf
+  - Tokens Used: 11856
+  - Analysis Result: Success
+  - VLM Remediated Fields: 2 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+    * OBL release date=None
+LLM Analysis: DUM-PAR-09.pdf
+  - Tokens Used: 10843
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-10.pdf
+  - Tokens Used: 11694
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-11.pdf
+  - Tokens Used: 11099
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-12.pdf
+  - Tokens Used: 11817
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-13.pdf
+  - Tokens Used: 10948
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-14.pdf
+  - Tokens Used: 11021
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-15.pdf
+  - Tokens Used: 11485
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-16.pdf
+  - Tokens Used: 10625
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: DUM-PAR-17.pdf
+  - Tokens Used: 11711
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: EVA PEARL V2506 - COPY NNBL (DUMAI).pdf
+  - Tokens Used: 32381
+  - Analysis Result: Success
+  - VLM Remediation: Not Required
+LLM Analysis: EVA PEARL V2506 - COPY NNBL (LUBUK GAUNG).pdf
+  - Tokens Used: 18087
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+  - VLM Remediated Fields: 2 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+    * OBL release date=None
+  - VLM Remediated Fields: 2 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+    * OBL release date=None
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: LBG-PAR-01.pdf
+  - Tokens Used: 12308
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: LBG-PAR-02.pdf
+  - Tokens Used: 11082
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: LBG-PAR-03.pdf
+  - Tokens Used: 11297
+  - Analysis Result: Success
+  - VLM Remediated Fields: 2 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+    * OBL release date=None
+LLM Analysis: LBG-PAR-04.pdf
+  - Tokens Used: 10925
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: LBG-PAR-05.pdf
+  - Tokens Used: 10887
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: LBG-PAR-06.pdf
+  - Tokens Used: 10854
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+LLM Analysis: LBG-PAR-07.pdf
+  - Tokens Used: 10841
+  - Analysis Result: Success
+  - VLM Remediated Fields: 1 fields
+  - VLM Tokens 使用: 0
+    * B/L split quantity (MT)=None
+
+=== Processing Summary ===
+Total Processing Time: 312.55 seconds
+Total Tokens Used: 319121
+Total Pages: 144
+Successfully Processed Files: 26
+
+=== Detailed File Processing Statistics ===
+File: DUM-PAR-01.pdf
+  - LLM Tokens: 11436
+  - VLM Tokens: 0
+  - Total Tokens: 11436
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-02.pdf
+  - LLM Tokens: 11018
+  - VLM Tokens: 0
+  - Total Tokens: 11018
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-03.pdf
+  - LLM Tokens: 10940
+  - VLM Tokens: 0
+  - Total Tokens: 10940
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-04.pdf
+  - LLM Tokens: 10964
+  - VLM Tokens: 0
+  - Total Tokens: 10964
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-05.pdf
+  - LLM Tokens: 11013
+  - VLM Tokens: 0
+  - Total Tokens: 11013
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-06.pdf
+  - LLM Tokens: 10979
+  - VLM Tokens: 0
+  - Total Tokens: 10979
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-07.pdf
+  - LLM Tokens: 11010
+  - VLM Tokens: 0
+  - Total Tokens: 11010
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-08.pdf
+  - LLM Tokens: 11856
+  - VLM Tokens: 0
+  - Total Tokens: 11856
+  - Successfully Extracted Fields: 11
+  - Missing Fields: 2
+  - VLM Remediated Fields: B/L split quantity (MT), OBL release date
+
+File: DUM-PAR-09.pdf
+  - LLM Tokens: 10843
+  - VLM Tokens: 0
+  - Total Tokens: 10843
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-10.pdf
+  - LLM Tokens: 11694
+  - VLM Tokens: 0
+  - Total Tokens: 11694
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-11.pdf
+  - LLM Tokens: 11099
+  - VLM Tokens: 0
+  - Total Tokens: 11099
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-12.pdf
+  - LLM Tokens: 11817
+  - VLM Tokens: 0
+  - Total Tokens: 11817
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-13.pdf
+  - LLM Tokens: 10948
+  - VLM Tokens: 0
+  - Total Tokens: 10948
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-14.pdf
+  - LLM Tokens: 11021
+  - VLM Tokens: 0
+  - Total Tokens: 11021
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-15.pdf
+  - LLM Tokens: 11485
+  - VLM Tokens: 0
+  - Total Tokens: 11485
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-16.pdf
+  - LLM Tokens: 10625
+  - VLM Tokens: 0
+  - Total Tokens: 10625
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: DUM-PAR-17.pdf
+  - LLM Tokens: 11711
+  - VLM Tokens: 0
+  - Total Tokens: 11711
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: EVA PEARL V2506 - COPY NNBL (DUMAI).pdf
+  - LLM Tokens: 32381
+  - VLM Tokens: 0
+  - Total Tokens: 32381
+  - Successfully Extracted Fields: 2
+  - Missing Fields: 0
+
+File: EVA PEARL V2506 - COPY NNBL (LUBUK GAUNG).pdf
+  - LLM Tokens: 18087
+  - VLM Tokens: 0
+  - Total Tokens: 18087
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: LBG-PAR-01.pdf
+  - LLM Tokens: 12308
+  - VLM Tokens: 0
+  - Total Tokens: 12308
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: LBG-PAR-02.pdf
+  - LLM Tokens: 11082
+  - VLM Tokens: 0
+  - Total Tokens: 11082
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: LBG-PAR-03.pdf
+  - LLM Tokens: 11297
+  - VLM Tokens: 0
+  - Total Tokens: 11297
+  - Successfully Extracted Fields: 11
+  - Missing Fields: 2
+  - VLM Remediated Fields: B/L split quantity (MT), OBL release date
+
+File: LBG-PAR-04.pdf
+  - LLM Tokens: 10925
+  - VLM Tokens: 0
+  - Total Tokens: 10925
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: LBG-PAR-05.pdf
+  - LLM Tokens: 10887
+  - VLM Tokens: 0
+  - Total Tokens: 10887
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: LBG-PAR-06.pdf
+  - LLM Tokens: 10854
+  - VLM Tokens: 0
+  - Total Tokens: 10854
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+File: LBG-PAR-07.pdf
+  - LLM Tokens: 10841
+  - VLM Tokens: 0
+  - Total Tokens: 10841
+  - Successfully Extracted Fields: 12
+  - Missing Fields: 1
+  - VLM Remediated Fields: B/L split quantity (MT)
+
+End Time: 2025-10-06 17:25:48
+Output Excel: Cargo_BL_20251006_172547.xlsx
+Output Log: Cargo_BL_20251006_172547_log.txt
