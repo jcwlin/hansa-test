@@ -10,7 +10,6 @@ from PIL import Image
 from pdf2image import convert_from_path
 import logging
 
-SERVICE_ACCOUNT_FILE = "fileanalyzer-463911-e71c7f7288ad.json"
 PROJECT_ID = "fileanalyzer-463911"
 LOCATION = "us-central1"
 MODEL = "gemini-2.5-pro"
@@ -21,14 +20,36 @@ _credentials = None
 _lock = threading.Lock()
 
 def get_model():
-    """取得單例模型實例，避免重複初始化"""
+    """
+    取得單例模型實例，避免重複初始化
+    優先使用 Cloud Run 的默認憑證（透過環境變數或服務帳戶）
+    如果沒有默認憑證，則嘗試從文件載入
+    """
     global _model_instance, _credentials
     
     if _model_instance is None:
         with _lock:
             if _model_instance is None:
-                _credentials, project = google.auth.load_credentials_from_file(SERVICE_ACCOUNT_FILE)
-                genai.configure(credentials=_credentials)
+                try:
+                    # 優先使用 Cloud Run 的默認憑證（Application Default Credentials）
+                    # 在 Cloud Run 上，服務帳戶會自動透過環境變數提供
+                    credentials, project = google.auth.default()
+                    logging.info("✅ 使用 Application Default Credentials (Cloud Run)")
+                    genai.configure(credentials=credentials)
+                except google.auth.exceptions.DefaultCredentialsError:
+                    # 如果沒有默認憑證，嘗試從文件載入（本地開發用）
+                    service_account_file = os.environ.get(
+                        'GOOGLE_APPLICATION_CREDENTIALS',
+                        'fileanalyzer-463911-e71c7f7288ad.json'
+                    )
+                    if os.path.exists(service_account_file):
+                        logging.info(f"✅ 從文件載入憑證: {service_account_file}")
+                        _credentials, project = google.auth.load_credentials_from_file(service_account_file)
+                        genai.configure(credentials=_credentials)
+                    else:
+                        logging.error("❌ 無法找到 Google 憑證，請設置 GOOGLE_APPLICATION_CREDENTIALS 環境變數")
+                        raise
+                
                 _model_instance = genai.GenerativeModel(MODEL)
     
     return _model_instance

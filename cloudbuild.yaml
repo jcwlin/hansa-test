@@ -1,0 +1,66 @@
+steps:
+  # 構建 Docker 映像
+  # 注意：如果 cloudbuild.yaml 在 hansa-test 目錄內，dir 應該是 '.'
+  # 如果從倉庫根目錄觸發，dir 應該是 'hansa-test'
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/bakudocs:$SHORT_SHA'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/bakudocs:latest'
+      - '.'
+
+  # 推送 Docker 映像到 Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/bakudocs:$SHORT_SHA'
+  
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/bakudocs:latest'
+
+  # 部署到 Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'bakudocs'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/bakudocs:$SHORT_SHA'
+      - '--region'
+      - 'asia-east1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--memory'
+      - '2Gi'
+      - '--cpu'
+      - '2'
+      - '--timeout'
+      - '300'
+      - '--max-instances'
+      - '10'
+      - '--set-env-vars'
+      - 'FLASK_ENV=production,PYTHONPATH=/app'
+      - '--service-account'
+      - '${_SERVICE_ACCOUNT_EMAIL}'
+
+images:
+  - 'gcr.io/$PROJECT_ID/bakudocs:$SHORT_SHA'
+  - 'gcr.io/$PROJECT_ID/bakudocs:latest'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  machineType: 'E2_HIGHCPU_8'
+
+substitutions:
+  # 替換為您的 Cloud Run 服務帳戶電子郵件
+  # 格式：YOUR_SERVICE_ACCOUNT@PROJECT_ID.iam.gserviceaccount.com
+  _SERVICE_ACCOUNT_EMAIL: 'your-service-account@${PROJECT_ID}.iam.gserviceaccount.com'
+
+timeout: '1200s'
+

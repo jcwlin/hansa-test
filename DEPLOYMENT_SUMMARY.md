@@ -1,489 +1,185 @@
-# BakuDocs Docker Deployment Complete Record
+# Cloud Run 部署配置總結
 
-[English](#english) | [中文](#中文)
+## ✅ 已完成的修改
 
----
+### 1. Gemini API 認證改進 ✅
 
-## English
+**修改文件**:
+- `analyzers/clients/gemini_client.py`
+- `utils_gemini.py`
 
-### 📋 Deployment Files List
+**變更內容**:
+- ✅ 優先使用 Cloud Run 的**默認憑證**（Application Default Credentials）
+- ✅ 自動偵測環境，在 Cloud Run 上無需 API key 文件
+- ✅ 本地開發時仍可使用文件憑證作為後備方案
 
-The following is a complete list of Docker deployment files created for the BakuDocs project:
+**優勢**:
+- 🔒 更安全：不需要在 Docker 映像中包含敏感憑證文件
+- 🚀 更簡單：Cloud Run 自動處理認證
+- ✅ 符合 Google Cloud 最佳實踐
 
-#### 🐳 Docker Configuration Files
-1. **`Dockerfile`** - Main container image definition
-2. **`docker-compose.yml`** - Development environment Docker Compose configuration
-3. **`docker-compose.prod.yml`** - Production environment Docker Compose configuration
-4. **`.dockerignore`** - Docker build exclusion file
+### 2. GitHub 自動部署配置 ✅
 
-#### 📚 Documentation and Scripts
-5. **`DOCKER_DEPLOYMENT.md`** - Detailed deployment guide (bilingual)
-6. **`setup_docker.sh`** - Automated installation script
-7. **`DEPLOYMENT_SUMMARY.md`** - This document, complete deployment record
+**新增文件**:
+- `cloudbuild.yaml` - Cloud Build 配置文件
+- `GITHUB_DEPLOYMENT.md` - 詳細部署指南
+- `GITHUB_DEPLOYMENT_QUICK.md` - 快速參考指南
 
-#### 🔧 Modified Application Files
-8. **`app.py`** - Modified to support production environment configuration
+**功能**:
+- ✅ 從 GitHub 推送代碼自動觸發部署
+- ✅ 自動構建 Docker 映像
+- ✅ 自動部署到 Cloud Run
+- ✅ 支援版本標籤（$SHORT_SHA）
 
-### 🚀 Complete Deployment Process
+### 3. Docker 配置優化 ✅
 
-#### Phase 1: Environment Preparation
+**修改文件**:
+- `Dockerfile` - 已優化為 Cloud Run 標準
+- `.dockerignore` - 已更新以排除不必要文件
+
+**變更**:
+- ✅ 使用 Gunicorn（生產級 WSGI 服務器）
+- ✅ 端口配置為 8080（Cloud Run 標準）
+- ✅ 支援 PORT 環境變數
+- ✅ 排除敏感文件和臨時文件
+
+### 4. 檔案清理 ✅
+
+**已刪除文件**:
+- ✅ `test_layout.html` - 測試文件
+- ✅ `verify_fix.html` - 測試文件
+- ✅ `logo_preview.html` - 測試文件
+- ✅ `fix_tokens_in_history.py` - 臨時腳本
+- ✅ `history.pkl` - 臨時文件
+
+### 5. Git 配置更新 ✅
+
+**修改文件**:
+- `.gitignore` - 已更新
+
+**新增排除規則**:
+- ✅ Google Cloud 憑證文件（*.json）
+- ✅ 測試文件
+- ✅ 臨時文件和緩存
+- ✅ MacOS 系統文件（__MACOSX/）
+
+## 📋 部署前檢查清單
+
+### 必需步驟
+
+- [ ] 確保 Google Cloud 專案已建立
+- [ ] 啟用 Cloud Build API
+- [ ] 啟用 Cloud Run API
+- [ ] 啟用 Vertex AI API（用於 Gemini）
+- [ ] 在 GitHub 上建立倉庫
+- [ ] 在 Cloud Console 中連接 GitHub 倉庫
+- [ ] 建立 Cloud Run 服務帳戶並授予權限
+- [ ] 更新 `cloudbuild.yaml` 中的服務帳戶電子郵件
+
+### 服務帳戶權限
+
 ```bash
-# 1. Verify Docker installation
-docker --version
-docker-compose --version
+PROJECT_ID=$(gcloud config get-value project)
 
-# 2. Create data directories
-mkdir -p data/{uploads,logs,databases}
+# 建立服務帳戶
+gcloud iam service-accounts create bakudocs-runner \
+  --display-name="BakuDocs Cloud Run Service Account"
 
-# 3. Verify required files exist
-ls -la fileanalyzer-463911-e71c7f7288ad.json
-ls -la config.yaml
+# 授予 Gemini API 權限
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member="serviceAccount:bakudocs-runner@${PROJECT_ID}.iam.gserviceaccount.com" \
+  --role="roles/aiplatform.user"
 ```
 
-#### Phase 2: One-Click Deployment (Recommended)
+### Cloud Build 權限
+
 ```bash
-# Use automated script
-./setup_docker.sh
+PROJECT_ID=$(gcloud config get-value project)
+PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format="value(projectNumber)")
+
+# 授予 Cloud Build 部署權限
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member="serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com" \
+  --role="roles/run.admin"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member="serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com" \
+  --role="roles/iam.serviceAccountUser"
 ```
 
-#### Phase 3: Manual Deployment
-```bash
-# Method A: Development environment
-docker-compose up -d
-
-# Method B: Production environment
-docker-compose -f docker-compose.prod.yml up -d
-
-# Method C: With nginx reverse proxy
-docker-compose -f docker-compose.prod.yml --profile nginx up -d
-```
-
-#### Phase 4: Deployment Verification
-```bash
-# Check container status
-docker-compose ps
-
-# Check application health
-curl http://localhost:5001/login
-
-# View logs
-docker-compose logs -f bakudocs
-```
-
-### 📊 Technical Specifications Record
-
-#### Container Configuration
-- **Base Image**: `python:3.11-slim`
-- **Working Directory**: `/app`
-- **Exposed Port**: `5001`
-- **Health Check**: 30-second interval, checking `/login` endpoint
-
-#### System Dependencies
-```dockerfile
-tesseract-ocr              # OCR engine
-tesseract-ocr-eng          # English OCR language pack
-tesseract-ocr-chi-tra      # Traditional Chinese OCR language pack
-poppler-utils              # PDF processing tools
-libpoppler-cpp-dev         # PDF development library
-gcc g++                    # Compilation tools
-```
-
-#### Python Dependencies
-- Install all required packages from `requirements.txt`
-- Includes Flask, pandas, openpyxl, Google AI, etc.
-
-#### Persistent Volumes
-```yaml
-volumes:
-  - ./data/uploads:/app/uploads     # Uploaded files
-  - ./data/logs:/app/logs           # Application logs
-  - ./data/databases:/app/databases # Database files
-```
-
-#### Environment Variables
-```yaml
-- FLASK_ENV=production
-- GOOGLE_APPLICATION_CREDENTIALS=/app/fileanalyzer-463911-e71c7f7288ad.json
-- PYTHONPATH=/app
-- HOST=0.0.0.0
-- PORT=5001
-```
-
-### 🔒 Security Implementation
-
-#### Container Security
-- ✅ Use non-root user (`appuser`)
-- ✅ Principle of least privilege
-- ✅ Read-only configuration file mounts
-- ✅ Health check monitoring
-
-#### Additional Production Security Measures
-- Resource limits (maximum 2GB memory)
-- Log rotation (10MB × 3 files)
-- Automatic restart policy
-- Network isolation
-
-### 📈 Monitoring and Maintenance
-
-#### Monitoring Commands
-```bash
-# Real-time status check
-docker-compose ps
-docker stats bakudocs-app
-
-# Log viewing
-docker-compose logs -f bakudocs
-docker-compose logs --tail=100 bakudocs
-
-# Resource usage
-docker system df
-docker system events
-```
-
-#### Maintenance Operations
-```bash
-# Update application
-docker-compose pull
-docker-compose up -d --build
-
-# Clean old images
-docker image prune -f
-
-# Backup data
-tar -czf bakudocs-backup-$(date +%Y%m%d).tar.gz data/
-
-# Restore data
-tar -xzf bakudocs-backup-YYYYMMDD.tar.gz
-```
-
-### 🚨 Troubleshooting Guide
+## 🚀 部署流程
 
-#### Common Issues and Solutions
+1. **推送代碼到 GitHub**:
+   ```bash
+   git add .
+   git commit -m "Configure for Cloud Run"
+   git push origin main
+   ```
 
-##### 1. Container Startup Failure
-```bash
-# Check logs
-docker-compose logs bakudocs
+2. **自動觸發**:
+   - Cloud Build 自動啟動
+   - 構建 Docker 映像
+   - 部署到 Cloud Run
 
-# Check port usage
-netstat -tulpn | grep :5001
-lsof -i :5001
-```
+3. **驗證部署**:
+   - 檢查 Cloud Build 狀態
+   - 檢查 Cloud Run 服務
+   - 測試應用端點
 
-##### 2. Google API Authentication Issues
-```bash
-# Verify service account file
-cat fileanalyzer-463911-e71c7f7288ad.json | python -m json.tool
+## 📝 重要說明
 
-# Check file permissions
-ls -la fileanalyzer-463911-e71c7f7288ad.json
-```
+### Gemini API 認證
 
-##### 3. Permission Issues
-```bash
-# Fix data directory permissions
-sudo chown -R 1000:1000 data/
-chmod -R 755 data/
-```
-
-##### 4. Memory Shortage
-```bash
-# Check system resources
-free -h
-df -h
-
-# Adjust Docker resource limits
-# Modify memory settings in docker-compose.prod.yml
-```
-
-### 🎯 Deployment Best Practices
-
-#### Development Environment
-- Use `docker-compose.yml`
-- Enable debug mode
-- Mount local code for real-time development
+✅ **無需 API key 文件** - 應用會自動使用 Cloud Run 的服務帳戶憑證
 
-#### Testing Environment  
-- Use `docker-compose.prod.yml`
-- Disable debug mode
-- Simulate production environment configuration
+✅ **自動認證** - 在 Cloud Run 上運行時，`google.auth.default()` 會自動使用服務帳戶
 
-#### Production Environment
-- Use `docker-compose.prod.yml`
-- Configure SSL certificates and reverse proxy
-- Implement monitoring and log management
-- Regular data backup
+✅ **本地開發** - 仍可使用 `GOOGLE_APPLICATION_CREDENTIALS` 環境變數指向本地憑證文件
 
-### 📝 Version Record
-
-#### v1.0 (2025-08-17)
-- ✅ Initial Dockerization completed
-- ✅ Support for development and production environments
-- ✅ Complete documentation and scripts included
-- ✅ Security best practices implemented
-- ✅ Health checks and monitoring added
-
-#### Future Improvement Plans
-- [ ] Add Kubernetes deployment configuration
-- [ ] Implement multi-stage build optimization
-- [ ] Add CI/CD pipeline configuration
-- [ ] Integrate external database support
-- [ ] Implement clustering and load balancing
-
----
-
-## 中文
-
-# BakuDocs Docker 部署完整記錄
-
-## 📋 部署文件清單
-
-以下是為 BakuDocs 專案創建的完整 Docker 部署文件：
-
-### 🐳 Docker 配置文件
-1. **`Dockerfile`** - 主要容器映像檔定義
-2. **`docker-compose.yml`** - 開發環境 Docker Compose 配置
-3. **`docker-compose.prod.yml`** - 生產環境 Docker Compose 配置
-4. **`.dockerignore`** - Docker 建置排除文件
-
-### 📚 文檔和腳本
-5. **`DOCKER_DEPLOYMENT.md`** - 詳細部署指南（中英文雙語）
-6. **`setup_docker.sh`** - 自動化安裝腳本
-7. **`DEPLOYMENT_SUMMARY.md`** - 本文件，完整部署記錄
-
-### 🔧 修改的應用文件
-8. **`app.py`** - 修改支援生產環境配置
-
----
-
-## 🚀 完整部署流程
-
-### 階段 1：環境準備
-```bash
-# 1. 確認 Docker 已安裝
-docker --version
-docker-compose --version
-
-# 2. 創建資料目錄
-mkdir -p data/{uploads,logs,databases}
-
-# 3. 確認必要文件存在
-ls -la fileanalyzer-463911-e71c7f7288ad.json
-ls -la config.yaml
-```
-
-### 階段 2：一鍵部署（推薦）
-```bash
-# 使用自動化腳本
-./setup_docker.sh
-```
-
-### 階段 3：手動部署
-```bash
-# 方法 A：開發環境
-docker-compose up -d
-
-# 方法 B：生產環境
-docker-compose -f docker-compose.prod.yml up -d
-
-# 方法 C：包含 nginx 反向代理
-docker-compose -f docker-compose.prod.yml --profile nginx up -d
-```
-
-### 階段 4：驗證部署
-```bash
-# 檢查容器狀態
-docker-compose ps
-
-# 檢查應用健康狀態
-curl http://localhost:5001/login
-
-# 查看日誌
-docker-compose logs -f bakudocs
-```
-
----
-
-## 📊 技術規格記錄
-
-### 容器配置
-- **基礎映像**: `python:3.11-slim`
-- **工作目錄**: `/app`
-- **暴露端口**: `5001`
-- **健康檢查**: 30秒間隔，檢查 `/login` 端點
-
-### 系統依賴項
-```dockerfile
-tesseract-ocr              # OCR 引擎
-tesseract-ocr-eng          # 英文 OCR 語言包
-tesseract-ocr-chi-tra      # 繁體中文 OCR 語言包
-poppler-utils              # PDF 處理工具
-libpoppler-cpp-dev         # PDF 開發庫
-gcc g++                    # 編譯工具
-```
-
-### Python 依賴項
-- 從 `requirements.txt` 安裝所有必要套件
-- 包含 Flask、pandas、openpyxl、Google AI 等
-
-### 持久化卷宗
-```yaml
-volumes:
-  - ./data/uploads:/app/uploads     # 上傳文件
-  - ./data/logs:/app/logs           # 應用日誌
-  - ./data/databases:/app/databases # 資料庫文件
-```
-
-### 環境變數
-```yaml
-- FLASK_ENV=production
-- GOOGLE_APPLICATION_CREDENTIALS=/app/fileanalyzer-463911-e71c7f7288ad.json
-- PYTHONPATH=/app
-- HOST=0.0.0.0
-- PORT=5001
-```
-
----
-
-## 🔒 安全性實施
-
-### 容器安全
-- ✅ 使用非 root 用戶 (`appuser`)
-- ✅ 最小權限原則
-- ✅ 唯讀配置文件掛載
-- ✅ 健康檢查監控
-
-### 生產環境額外安全措施
-- 資源限制（記憶體最大 2GB）
-- 日誌輪轉（10MB × 3 文件）
-- 自動重啟策略
-- 網路隔離
-
----
-
-## 📈 監控和維護
-
-### 監控命令
-```bash
-# 即時狀態檢查
-docker-compose ps
-docker stats bakudocs-app
-
-# 日誌查看
-docker-compose logs -f bakudocs
-docker-compose logs --tail=100 bakudocs
-
-# 資源使用情況
-docker system df
-docker system events
-```
-
-### 維護操作
-```bash
-# 更新應用
-docker-compose pull
-docker-compose up -d --build
-
-# 清理舊映像
-docker image prune -f
-
-# 備份資料
-tar -czf bakudocs-backup-$(date +%Y%m%d).tar.gz data/
-
-# 還原資料
-tar -xzf bakudocs-backup-YYYYMMDD.tar.gz
-```
-
----
-
-## 🚨 故障排除指南
-
-### 常見問題和解決方案
-
-#### 1. 容器啟動失敗
-```bash
-# 檢查日誌
-docker-compose logs bakudocs
-
-# 檢查端口占用
-netstat -tulpn | grep :5001
-lsof -i :5001
-```
-
-#### 2. Google API 認證問題
-```bash
-# 驗證服務帳號文件
-cat fileanalyzer-463911-e71c7f7288ad.json | python -m json.tool
-
-# 檢查文件權限
-ls -la fileanalyzer-463911-e71c7f7288ad.json
-```
-
-#### 3. 權限問題
-```bash
-# 修復資料目錄權限
-sudo chown -R 1000:1000 data/
-chmod -R 755 data/
-```
-
-#### 4. 記憶體不足
-```bash
-# 檢查系統資源
-free -h
-df -h
-
-# 調整 Docker 資源限制
-# 修改 docker-compose.prod.yml 中的 memory 設定
-```
-
----
-
-## 🎯 部署最佳實踐
-
-### 開發環境
-- 使用 `docker-compose.yml`
-- 啟用調試模式
-- 掛載本地代碼進行即時開發
-
-### 測試環境  
-- 使用 `docker-compose.prod.yml`
-- 禁用調試模式
-- 模擬生產環境配置
-
-### 生產環境
-- 使用 `docker-compose.prod.yml`
-- 配置 SSL 證書和反向代理
-- 實施監控和日誌管理
-- 定期備份重要資料
-
----
-
-## 📝 版本記錄
-
-### v1.0 (2025-08-17)
-- ✅ 初始 Docker 化完成
-- ✅ 支援開發和生產環境
-- ✅ 包含完整文檔和腳本
-- ✅ 實施安全最佳實踐
-- ✅ 添加健康檢查和監控
-
-### 未來改進計劃
-- [ ] 添加 Kubernetes 部署配置
-- [ ] 實施多階段建置優化
-- [ ] 添加 CI/CD 流水線配置
-- [ ] 整合外部資料庫支援
-- [ ] 實施集群和負載平衡
-
----
-
-## 📞 支援和聯繫
-
-如需進一步協助，請參考：
-1. **主要文檔**: `DOCKER_DEPLOYMENT.md`
-2. **安裝指南**: `INSTALLATION_GUIDE.md`
-3. **專案分析**: `PROJECT_ANALYSIS.md`
-4. **自動化腳本**: `setup_docker.sh`
-
----
-
-*此文件記錄了 BakuDocs 專案的完整 Docker 部署實施過程，確保部署過程的可重現性和一致性。*
+### 無狀態限制
+
+⚠️ **文件上傳** - Cloud Run 是無狀態的，上傳的文件不會持久化
+- 建議後續遷移到 Cloud Storage
+
+⚠️ **數據庫** - SQLite 文件不會持久化
+- 建議後續遷移到 Cloud SQL
+
+⚠️ **日誌** - 應用日誌會自動發送到 Cloud Logging，無需額外配置
+
+## 📚 相關文檔
+
+- `GITHUB_DEPLOYMENT.md` - 詳細的 GitHub 部署指南
+- `GITHUB_DEPLOYMENT_QUICK.md` - 快速參考
+- `CLOUD_RUN_DEPLOYMENT.md` - Cloud Run 部署指南
+- `cloudbuild.yaml` - Cloud Build 配置文件
+
+## 🔧 故障排除
+
+### 問題：Gemini API 認證失敗
+
+**解決方案**:
+1. 確認服務帳戶有 `roles/aiplatform.user` 權限
+2. 確認 Cloud Run 服務使用正確的服務帳戶
+3. 檢查 Cloud Logging 中的錯誤日誌
+
+### 問題：構建失敗
+
+**解決方案**:
+1. 檢查 `cloudbuild.yaml` 語法
+2. 確認 Dockerfile 正確
+3. 檢查 Cloud Build 日誌
+
+### 問題：部署失敗
+
+**解決方案**:
+1. 確認 Cloud Build 服務帳戶有部署權限
+2. 檢查 Cloud Run 日誌
+3. 確認端口配置正確（8080）
+
+## ✨ 後續改進建議
+
+1. **文件存儲**: 遷移到 Cloud Storage
+2. **數據庫**: 遷移到 Cloud SQL
+3. **監控**: 設置 Cloud Monitoring 告警
+4. **CDN**: 配置 Cloud CDN 加速靜態資源
+5. **認證**: 配置 Cloud Run IAM 或 Firebase Authentication

@@ -1,0 +1,90 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+__MACOSX/
+
+# Git
+.git/
+.gitignore
+
+# Docker
+docker-compose*.yml
+Dockerfile*
+.dockerignore
+
+# Documentation
+*.md
+!README.md
+
+# Test files
+test_*.py
+*_test.py
+tests/
+test_layout.html
+verify_fix.html
+logo_preview.html
+
+# History and cache
+history.pkl
+*.pkl
+
+# Temporary files
+*.tmp
+temp/
+
+# MacOS
+__MACOSX/
+
+# Podman/Docker setup scripts
+setup_*.sh
+
+# Database files (will be created in container)
+*.db
+*.sqlite
+*.sqlite3
+database.db
+app.db
+
+# Logs (will be created in container)
+*.log
+logs/
+*.txt
+!requirements.txt
+
+# Data directories (will be created in container)
+data/uploads/
+data/logs/
+uploads/
+logs/
+
+# Google Cloud credentials (不應該包含在 Docker 映像中)
+*.json
+!package.json
+!tsconfig.json
+
+# Environment files
+.env
+.env.local
+
