@@ -2,39 +2,43 @@ import os
 import json
 import time
 import threading
-from google.cloud import aiplatform
-from google.oauth2 import service_account
 import google.generativeai as genai
-import google.auth
 from PIL import Image
 from pdf2image import convert_from_path
 import logging
 
-SERVICE_ACCOUNT_FILE = "fileanalyzer-463911-e71c7f7288ad.json"
-PROJECT_ID = "fileanalyzer-463911"
-LOCATION = "us-central1"
 MODEL = "gemini-2.5-pro"
 
-# 全域模型實例，避免重複初始化
+# Global model instance to avoid repeated initialization
 _model_instance = None
-_credentials = None
 _lock = threading.Lock()
 
+
 def get_model():
-    """取得單例模型實例，避免重複初始化"""
-    global _model_instance, _credentials
-    
+    """
+    Get singleton model instance, avoiding repeated initialization
+    Uses API key authentication (simpler than OAuth)
+    """
+    global _model_instance
+
     if _model_instance is None:
         with _lock:
             if _model_instance is None:
-                _credentials, project = google.auth.load_credentials_from_file(SERVICE_ACCOUNT_FILE)
-                genai.configure(credentials=_credentials)
-                _model_instance = genai.GenerativeModel(MODEL)
-    
+                try:
+                    # Configure with API key (can be overridden by GEMINI_API_KEY env var)
+                    api_key = os.getenv('GEMINI_API_KEY', 'AIzaSyDnqwyH_n_anNMTQQRwHxFWMvdt1wJRC28')
+                    genai.configure(api_key=api_key)
+                    logging.info("✅ Configured Gemini with API key")
+                    _model_instance = genai.GenerativeModel(MODEL)
+                except Exception as e:
+                    logging.error(f"❌ Failed to configure Gemini: {e}")
+                    raise
+
     return _model_instance
 
+
 def call_gemini_api(prompt: str, image_path: str = None, max_retries: int = 3) -> tuple:
-    """呼叫 Gemini API，支援 Vision LLM 圖片處理，PDF 會自動轉第一頁圖片"""
+    """Call Gemini API, supports Vision LLM image processing, PDFs auto-convert to first page image"""
     model = get_model()
     for attempt in range(max_retries):
         try:
@@ -61,11 +65,13 @@ def call_gemini_api(prompt: str, image_path: str = None, max_retries: int = 3) -
                     generation_config=generation_config
                 )
             result = response.text.strip() if hasattr(response, 'text') else str(response)
-            # 若 prompt 是 OBL release date 且結果為空/null，log 警告
-            if 'OBL release date' in prompt and (not result or result.strip() == '' or result.strip().lower() == 'null'):
-                logging.warning(f"VLM API 補救 OBL release date 失敗: {image_path}")
-            
-            # 正確獲取 token 使用量
+
+            # Log warning if OBL release date extraction fails
+            if 'OBL release date' in prompt and (
+                    not result or result.strip() == '' or result.strip().lower() == 'null'):
+                logging.warning(f"VLM API failed to extract OBL release date: {image_path}")
+
+            # Get token usage correctly
             tokens_used = 0
             try:
                 if hasattr(response, 'usage_metadata'):
@@ -75,7 +81,7 @@ def call_gemini_api(prompt: str, image_path: str = None, max_retries: int = 3) -
                     elif hasattr(usage_metadata, 'total_tokens'):
                         tokens_used = usage_metadata.total_tokens
             except Exception as e:
-                logging.debug(f"無法獲取 token 使用量: {e}")
+                logging.debug(f"Unable to get token usage: {e}")
                 tokens_used = 0
             return result, tokens_used
         except Exception as e:
@@ -84,32 +90,33 @@ def call_gemini_api(prompt: str, image_path: str = None, max_retries: int = 3) -
             continue
     return '', 0
 
+
 def analyze_with_gemini(content, prompt_template):
-    """使用 Gemini 分析內容並返回結構化資料"""
+    """Analyze content with Gemini and return structured data"""
     try:
-        # 構建完整提示詞
+        # Build complete prompt
         full_prompt = f"{prompt_template}\n\n文件內容：\n{content}"
-        
-        # 呼叫 API
+
+        # Call API
         response_text, tokens_used = call_gemini_api(full_prompt)
-        
-        # 解析 JSON 回應
+
+        # Parse JSON response
         from app import extract_json_from_response
         result = extract_json_from_response(response_text)
-        
+
         if isinstance(result, dict) and 'error' in result:
-            print(f"Gemini 回應解析錯誤: {result['error']}")
+            print(f"Gemini response parsing error: {result['error']}")
             return None
-        
-        # 確保回傳格式是列表
+
+        # Ensure return format is a list
         if isinstance(result, dict):
             result = [result]
         elif not isinstance(result, list):
-            print(f"Gemini 回應格式錯誤，期望列表或字典，實際: {type(result)}")
+            print(f"Gemini response format error, expected list or dict, got: {type(result)}")
             return None
-        
+
         return result
-        
+
     except Exception as e:
-        print(f"Gemini 分析錯誤: {str(e)}")
-        return None 
+        print(f"Gemini analysis error: {str(e)}")
+        return None
